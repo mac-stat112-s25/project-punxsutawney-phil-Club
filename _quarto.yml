@@ -41,9 +41,14 @@ book:
     - part: "Effective Team Work"
       chapters:
       - teamwork/teamwork-zeke.qmd
+      - teamwork/teamwork-joey.qmd
+      - teamwork/teamwork-mayande.qmd
       
     - part: "EDA"
       chapters:
+      - EDA/EDA-zeke.qmd
+      - EDA/EDA-joey.qmd
+      - EDA/EDA-mayande.qmd
       
   appendices:
   - src/appx/proposal.qmd
