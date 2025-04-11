@@ -1,5 +1,5 @@
 ---
-title: "Groundhog_data_exploration"
+title: "EDA-zeke"
 format: html
 ---
 
@@ -9,9 +9,3 @@ groundhogs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience
 predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv')
 
 ```
-
-```{r}
-predictions |> 
-  left_join()
-```
-
