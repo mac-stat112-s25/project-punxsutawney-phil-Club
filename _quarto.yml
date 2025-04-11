@@ -38,6 +38,12 @@ book:
   chapters:
     - index.qmd
 
+    - part: "Effective Team Work"
+      chapters:
+      
+    - part: "EDA"
+      chapters:
+      
   appendices:
   - src/appx/proposal.qmd
   - src/appx/case-study.qmd
