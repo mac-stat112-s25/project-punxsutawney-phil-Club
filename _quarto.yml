@@ -40,15 +40,15 @@ book:
 
     - part: "Effective Team Work"
       chapters:
-      - teamwork/teamwork-zeke.qmd
-      - teamwork/teamwork-joey.qmd
-      - teamwork/teamwork-mayande.qmd
+      - src/et/zeke-f.qmd
+      - src/et/joey-g.qmd
+      - src/et/mayande-m.qmd
       
     - part: "EDA"
       chapters:
-      - EDA/EDA-zeke.qmd
-      - EDA/EDA-joey.qmd
-      - EDA/EDA-mayande.qmd
+      - src/eda/EDA-zeke.qmd
+      - src/eda/EDA-joey.qmd
+      - src/eda/EDA-mayande.qmd
       
   appendices:
   - src/appx/proposal.qmd
