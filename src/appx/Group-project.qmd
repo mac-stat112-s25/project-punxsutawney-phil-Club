@@ -25,6 +25,6 @@ groundhogs_all <- predictions |>
 ```{r}
 # Read Weather Data 
 library(readr)
-data <- read_csv("../../data/data.csv")
+Actual_weather <- read_csv("../../data/data.csv")
 ```
 
