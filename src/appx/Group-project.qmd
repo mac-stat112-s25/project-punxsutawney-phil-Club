@@ -1,0 +1,30 @@
+ins---
+title: "Group-project"
+format: html
+---
+
+```{r}
+
+# Option 2: Read directly from GitHub
+
+groundhogs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/groundhogs.csv')
+predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/predictions.csv')
+
+```
+
+```{r}
+library(tidyverse)
+
+groundhogs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv')
+predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv')
+
+groundhogs_all <- predictions |> 
+   left_join(groundhogs, join_by(id==id))
+```
+
+```{r}
+# Read Weather Data 
+library(readr)
+Actual_weather <- read_csv("../../data/data.csv")
+```
+
