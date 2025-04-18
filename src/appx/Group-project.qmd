@@ -20,6 +20,5 @@ predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascienc
 
 groundhogs_all <- predictions |> 
    left_join(groundhogs, join_by(id==id))
-
 ```
 
