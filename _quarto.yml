@@ -49,6 +49,11 @@ book:
       - src/eda/EDA-zeke.qmd
       - src/eda/EDA-joey.qmd
       - src/eda/EDA-mayande.qmd
+    - part: "Individual Work Docs"
+      chapters: 
+      - src/workdocs/iwc-joey/qmd
+      - src/workdocs/iwc-zeke.qmd
+      - src/workdocs/iwc-mayande.qmd
       
   appendices:
   - src/appx/proposal.qmd
