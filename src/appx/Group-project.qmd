@@ -23,3 +23,9 @@ groundhogs_all <- predictions |>
 
 ```
 
+```{r}
+# Read Weather Data 
+library(readr)
+data <- read_csv("~/GitHub/portfolio-jgebin/project-punxsutawney-phil-gang/data/data.csv")
+```
+
