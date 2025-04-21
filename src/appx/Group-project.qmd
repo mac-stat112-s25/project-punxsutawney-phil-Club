@@ -34,7 +34,7 @@ Actual_weather <- Actual_weather |>
 ```
 
 ```{r}
-groundhogs_all|> 
-  left_join(Actual_weather, join_by(year == year )) 
+groundhogs_final <- groundhogs_all|> 
+  left_join(Actual_weather, join_by(year == year))
 ```
 
