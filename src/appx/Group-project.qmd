@@ -41,6 +41,7 @@ groundhogs_final <- groundhogs_all|>
 
 ```{r}
 groundhogs_final <- groundhogs_final %>%
-  mutate(earlyspring = Value >= 37) |> 
+  mutate(earlyspring = Value >= 37) |>
+  mutate(accuracy = shadow != earlyspring)
 ```
 
