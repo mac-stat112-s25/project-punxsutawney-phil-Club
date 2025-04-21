@@ -29,10 +29,6 @@ Actual_weather <- read_csv("../../data/data.csv", skip = 3)
 ```
 
 ```{r}
-Actual_weather |> 
-  mutate(Year = str_sub())
-```
-```{r}
 Actual_weather <- Actual_weather |> 
   mutate(year = as.numeric (str_sub(Date, 1,4)))
 ```
