@@ -28,3 +28,8 @@ library(readr)
 Actual_weather <- read_csv("../../data/data.csv", skip = 3)
 ```
 
+```{r}
+Actual_weather |> 
+  mutate(Year = str_sub())
+```
+
