@@ -19,7 +19,8 @@ groundhogs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience
 predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv')
 
 groundhogs_all <- predictions |> 
-   left_join(groundhogs, join_by(id==id))
+   left_join(groundhogs, join_by(id==id)) |> 
+  filter(region == "Pennsylvania")
 ```
 
 ```{r}
@@ -36,5 +37,10 @@ Actual_weather <- Actual_weather |>
 ```{r}
 groundhogs_final <- groundhogs_all|> 
   left_join(Actual_weather, join_by(year == year))
+```
+
+```{r}
+groundhogs_final <- groundhogs_final %>%
+  mutate(earlyspring = Value >= 37) |> 
 ```
 
