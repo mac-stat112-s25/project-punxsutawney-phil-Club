@@ -34,12 +34,15 @@ groundhogs_final <- groundhogs_all|>
 ```{r}
 groundhogs_final <- groundhogs_final %>%
   mutate(earlyspring = Value >= 37) |> 
-  mutate(accuracy = shadow != earlyspring)
+  mutate(accuracy = shadow != earlyspring) |>
+  mutate(type = str_replace(type, "Taxidermied groundhogs", "Taxidermied groundhog"))
 ```
 
 ```{r}
 ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
-  geom_bar()
+  geom_bar()+
+  
+  theme_bw()
 
 ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
   geom_point()

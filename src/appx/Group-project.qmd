@@ -41,8 +41,10 @@ groundhogs_final <- groundhogs_all|>
 
 ```{r}
 groundhogs_final <- groundhogs_final %>%
-  mutate(earlyspring = Value >= 37) |>
-  mutate(accuracy = shadow != earlyspring)
+  mutate(earlyspring = Value >= 37) |> 
+  mutate(accuracy = shadow != earlyspring) |>
+  mutate(type = str_replace(type, "Taxidermied groundhogs", "Taxidermied groundhog")) |> 
+  filter(!is.na(accuracy))
 ```
 
 ```{r}
