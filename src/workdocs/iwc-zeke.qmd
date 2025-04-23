@@ -5,6 +5,7 @@ format: html
 
 ```{r}
 library(tidyverse)
+library(viridis)
 
 groundhogs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv')
 predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv')
@@ -35,14 +36,19 @@ groundhogs_final <- groundhogs_all|>
 groundhogs_final <- groundhogs_final %>%
   mutate(earlyspring = Value >= 37) |> 
   mutate(accuracy = shadow != earlyspring) |>
-  mutate(type = str_replace(type, "Taxidermied groundhogs", "Taxidermied groundhog"))
+  mutate(type = str_replace(type, "Taxidermied groundhogs", "Taxidermied groundhog")) |> 
+  filter(!is.na(accuracy))
 ```
 
 ```{r}
 ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
   geom_bar()+
-  
+  scale_fill_manual("Type of Groundhog", values = viridis(5)) +
+  labs(x = "Groundhog Accuracy", y = "Count Predictions", title = "Accuracy of Groundhog Predictions", caption = "Data from the-numbers.com", alt = "Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much") +
   theme_bw()
+
+
+
 
 ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
   geom_point()
