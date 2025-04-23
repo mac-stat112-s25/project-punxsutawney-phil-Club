@@ -52,8 +52,18 @@ groundhogs_final <- groundhogs_final %>%
 ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
   geom_bar()+
   scale_fill_manual("Type of Groundhog", values = viridis(5)) +
-  labs(x = "Groundhog Accuracy", y = "Count Predictions", title = "Accuracy of Groundhog Predictions", caption = "Data from the-numbers.com", alt = "Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much") +
+  labs(x = "Groundhog Accuracy", y = "Count Predictions", title = "Accuracy of Groundhog Predictions", caption = "Data from groundhog-day.com and NOAR", alt = "Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much") +
   theme_bw()
+
+
+ggplot(groundhogs_final, aes(x = type, fill = accuracy)) +
+  geom_bar(position = "fill", color = "white")+
+  scale_fill_manual("Groundhog Accuracy", values = viridis(2)) +
+  labs(x = "Type of Groundhog", y = "Percent of Predictions", title = "Proportion of Acurate Groundhog Predictions by Type", caption = "Data from groundhog-day.com and NOAR") +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 15, hjust = 1)
+  )
 
 ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
   geom_point()
