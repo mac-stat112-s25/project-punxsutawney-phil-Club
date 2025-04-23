@@ -13,13 +13,13 @@ Actual_weather|>
 library(mosaic)
 
 groundhog_location <- tribble(
-  ~name, ~long, ~lat, ~type,
+  ~name, ~longitude, ~latitude, ~type,
   "Punxsutawney Phil",-78.96225, 40.9312, "Groundhog", 
   "Octoraro Orphie", -76.09196, 39.82554, "Taxidermied groundhog",
   "Schnogadahl Sammi",-75.49787, 40.90142, "Taxidermied groundhog",
   "Poor Richard", -76.72926, 39.96586, "Taxidermied groundhog",
   "Uni the Groundhog", -76.29992, 40.41813, "Taxidermied groundhog",
-  "Grover and Sue", -76.36766, 40.57162, "Taxidermied groundhogs",
+  "Grover and Sue", -76.36766, 40.57162, "Taxidermied groundhog",
   "Dover Doug", -76.85717, 39.99791, "Person in a groundhog suit",
   "Lawrenceville Lucy", -77.20171, 41.97356, "Groundhog",
   "Mount Joy Minnie", -76.50431, 40.10912, "Plush groundhog",
@@ -43,6 +43,8 @@ library(leaflet)
 
 leaflet(data = groundhog_location) |>
   addTiles() |>
-  addCircles()
+  addCircles(color = ~colorFactor(c("darkred","darkgreen","red","darkblue","orange"), domain= groundhog_location$type)(type), label = groundhog_location$name) |>
+   addLegend(position = "bottomright",
+            colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Legend")
 ```
 
