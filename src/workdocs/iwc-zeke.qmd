@@ -37,3 +37,11 @@ groundhogs_final <- groundhogs_final %>%
   mutate(accuracy = shadow != earlyspring)
 ```
 
+```{r}
+ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
+  geom_bar()
+
+ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
+  geom_point()
+```
+
