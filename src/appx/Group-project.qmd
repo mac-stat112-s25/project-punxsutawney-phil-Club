@@ -55,7 +55,7 @@ ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
   labs(x = "Groundhog Accuracy", y = "Count Predictions", title = "Accuracy of Groundhog Predictions", caption = "Data from the-numbers.com", alt = "Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much") +
   theme_bw()
 
-ggplot(groundhogs_final aes(x = year, y = Value, color = accuracy)) +
+ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
   geom_point()
 ```
 
@@ -91,12 +91,17 @@ groundhog_location <- tribble(
 # Load Packages
 library(gplots)
 library(leaflet)
+library(htmlwidgets)
+
 
 #Map
-leaflet(data = groundhog_location) |>
+groundhog_map <- leaflet(data = groundhog_location) |>
   addTiles() |>
   addCircles(color = ~colorFactor(c("darkred","darkgreen","red","darkblue","orange"), domain= groundhog_location$type)(type), label = groundhog_location$name) |>
    addLegend(position = "bottomright",
             colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Type")
+
+saveWidget(groundhog_map, file = "groundhog_map.html")
+
 ```
 
