@@ -66,7 +66,10 @@ ggplot(groundhogs_final, aes(x = type, fill = accuracy)) +
   )
 
 ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
-  geom_point()
+  geom_point() +
+  scale_color_manual("Groundhog Accuracy", values = viridis(2)) +
+  labs(x = "Year of Prediction", y = "Average Temperature", title = "Prediction Acuracy by Temperature Over Time", caption = "Data from groundhog-day.com and NOAR") +
+  theme_bw()
 ```
 
 # Map of Groundhogs in Pennsylvania
