@@ -59,3 +59,44 @@ ggplot(groundhogs_final aes(x = year, y = Value, color = accuracy)) +
   geom_point()
 ```
 
+# Map of Groundhogs in Pennsylvania
+
+```{r}
+library(mosaic)
+
+#Tribble dataset
+
+groundhog_location <- tribble(
+  ~name, ~longitude, ~latitude, ~type,
+  "Punxsutawney Phil",-78.96225, 40.9312, "Groundhog", 
+  "Octoraro Orphie", -76.09196, 39.82554, "Taxidermied groundhog",
+  "Schnogadahl Sammi",-75.49787, 40.90142, "Taxidermied groundhog",
+  "Poor Richard", -76.72926, 39.96586, "Taxidermied groundhog",
+  "Uni the Groundhog", -76.29992, 40.41813, "Taxidermied groundhog",
+  "Grover and Sue", -76.36766, 40.57162, "Taxidermied groundhog",
+  "Dover Doug", -76.85717, 39.99791, "Person in a groundhog suit",
+  "Lawrenceville Lucy", -77.20171, 41.97356, "Groundhog",
+  "Mount Joy Minnie", -76.50431, 40.10912, "Plush groundhog",
+  "Patty Pagoda", -75.90783, 40.33607, "Person in a groundhog suit",
+  "Tinicum Tim", -75.25721, 39.89215, "Groundhog puppet",
+  "Harleysville Hank", -75.38234, 40.29050, "Plush groundhog",
+  "Mount Gretna Grady", -76.46776, 40.24677, "Plush groundhog",
+  "Poppy the Groundhog", -76.66445, 40.12133, "Groundhog",
+  "MT Parker", -76.30730, 40.05880,	"Plush groundhog"
+)
+```
+
+
+```{r}
+# Load Packages
+library(gplots)
+library(leaflet)
+
+#Map
+leaflet(data = groundhog_location) |>
+  addTiles() |>
+  addCircles(color = ~colorFactor(c("darkred","darkgreen","red","darkblue","orange"), domain= groundhog_location$type)(type), label = groundhog_location$name) |>
+   addLegend(position = "bottomright",
+            colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Type")
+```
+
