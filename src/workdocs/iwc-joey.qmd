@@ -5,8 +5,8 @@ format: html
 
 ```{r}
 # 61 data point > 37 F (Early Spring) --- 69 data points < 37 F (Late Winter)
-Actual_weather|>
-  arrange(desc(Value))
+#Actual_weather|>
+  #arrange(desc(Value))
 ```
 
 ```{r}
