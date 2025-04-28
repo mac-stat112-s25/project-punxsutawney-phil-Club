@@ -62,13 +62,4 @@ ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
   theme_bw()
   
 ```
-```{r}
-library(readr)
-confusionmat <- groundhogs_final |> 
-  select(earlyspring, shadow) |> 
-  mutate(invertspring = !earlyspring)
-
-in_sample_confusion <- confusionmat %>% 
-  conf_mat(truth = invertspring, estimate = shadow)
-```
 
