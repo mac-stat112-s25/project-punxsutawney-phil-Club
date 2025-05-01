@@ -318,7 +318,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Wednesday, April 30, 2025</p>
+      <p class="date">Thursday, May 1, 2025</p>
     </div>
   </div>
   
@@ -327,11 +327,7 @@ cookieconsent.run({
   
 
 
-</header><p>Your report will go here.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># this is a test code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="report" class="level1" data-number="1"><h1 data-number="1">
+</header><section id="report" class="level1" data-number="1"><h1 data-number="1">
 <span class="header-section-number">1</span> Report</h1>
 <section id="introduction" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="introduction">
 <span class="header-section-number">1.1</span> Introduction</h2>
@@ -339,6 +335,38 @@ cookieconsent.run({
 </section><section id="data-collection" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="data-collection">
 <span class="header-section-number">1.2</span> Data collection</h2>
 <p>We source our data from tidytuesday, which provides two csv files, one for groundhog characteristics including their name, longitude, latitude, type of groundhog, to name a few. The second csv is a prediction data set that has information on the predictions made by groundhogs. The corresponding variable between the two data sets is the id variable that identifies each groundhog and can allow for us to merge the two data sets. It is important to note that the authors attempted to provide weather data to accompany this dataset, but have been unsuccessful so far. We explore additional weather data ourselves to supplement the tidytuesday data. The weather data is sourced from the National Centers for Environmental Information. With the weather data we will be able to determine the accuracy of the predictions.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 75 Columns: 17
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (11): slug, shortname, name, city, region, country, source, current_pred...
+dbl  (4): id, latitude, longitude, predictions_count
+lgl  (2): is_groundhog, active
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1462 Columns: 4
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): details
+dbl (2): id, year
+lgl (1): shadow
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>groundhogs_all <span class="ot">&lt;-</span> predictions <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>   <span class="fu">left_join</span>(groundhogs, <span class="fu">join_by</span>(id<span class="sc">==</span>id)) <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section><section id="data-preparation" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="data-preparation">
 <span class="header-section-number">1.3</span> Data preparation</h2>
 <p>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</p>
@@ -979,41 +1007,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="an">title:</span><span class="co"> "Report"</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co">  echo: true      # change to true to show the code</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="an">code-fold:</span><span class="co"> false  # change to true to fold the code chunks</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="co">---</span></span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a>Your report will go here.</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="in">```{r}</span></span>
-<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># this is a test code</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="in">```</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a></span>
-<span id="cb2-16"><a href="#cb2-16"></a><span class="fu"># Report </span></span>
-<span id="cb2-17"><a href="#cb2-17"></a></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="fu">## Introduction</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a></span>
-<span id="cb2-20"><a href="#cb2-20"></a>Our analysis focuses on the longstanding weather prediction using groundhogs. We are curious to explore how effective groundhogs actually are in making predictions of weather. Groundhog Day, which is the event our research is based on, is a tradition where a groundhog predicts the arrival of spring by observing its shadow, celebrated annually with excitement and cultural significance. Our findings provide an interesting perspective on how the type of groundhog plays a significant role in accuracy of predictions and how this could potentially inform future predictions.  </span>
-<span id="cb2-21"><a href="#cb2-21"></a></span>
-<span id="cb2-22"><a href="#cb2-22"></a><span class="fu">## Data collection </span></span>
-<span id="cb2-23"><a href="#cb2-23"></a></span>
-<span id="cb2-24"><a href="#cb2-24"></a>We source our data from tidytuesday, which provides two csv files, one for groundhog characteristics including their name, longitude, latitude, type of groundhog, to name a few. The second csv is a prediction data set that has information on the predictions made by groundhogs. The corresponding variable between the two data sets is the id variable that identifies each groundhog and can allow for us to merge the two data sets. It is important to note that the authors attempted to provide weather data to accompany this dataset, but have been unsuccessful so far. We explore additional weather data ourselves to supplement the tidytuesday data. The weather data is sourced from the National Centers for Environmental Information. With the weather data we will be able to determine the accuracy of the predictions. </span>
-<span id="cb2-25"><a href="#cb2-25"></a></span>
-<span id="cb2-26"><a href="#cb2-26"></a><span class="fu">## Data preparation </span></span>
-<span id="cb2-27"><a href="#cb2-27"></a></span>
-<span id="cb2-28"><a href="#cb2-28"></a>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</span>
-<span id="cb2-29"><a href="#cb2-29"></a></span>
-<span id="cb2-30"><a href="#cb2-30"></a><span class="fu">## Data visualization and Analysis</span></span>
-<span id="cb2-31"><a href="#cb2-31"></a></span>
-<span id="cb2-32"><a href="#cb2-32"></a>The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.</span>
-<span id="cb2-33"><a href="#cb2-33"></a> </span>
-<span id="cb2-34"><a href="#cb2-34"></a></span>
-<span id="cb2-35"><a href="#cb2-35"></a><span class="fu">## What is the story here?  </span></span>
-<span id="cb2-36"><a href="#cb2-36"></a></span>
-<span id="cb2-37"><a href="#cb2-37"></a>Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities. </span>
+<div class="sourceCode" id="cb6" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">---</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="an">title:</span><span class="co"> "Report"</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">  echo: true      # change to true to show the code</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="an">code-fold:</span><span class="co"> false  # change to true to fold the code chunks</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">---</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a></span>
+<span id="cb6-8"><a href="#cb6-8"></a></span>
+<span id="cb6-9"><a href="#cb6-9"></a><span class="fu"># Report </span></span>
+<span id="cb6-10"><a href="#cb6-10"></a></span>
+<span id="cb6-11"><a href="#cb6-11"></a><span class="fu">## Introduction</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a></span>
+<span id="cb6-13"><a href="#cb6-13"></a>Our analysis focuses on the longstanding weather prediction using groundhogs. We are curious to explore how effective groundhogs actually are in making predictions of weather. Groundhog Day, which is the event our research is based on, is a tradition where a groundhog predicts the arrival of spring by observing its shadow, celebrated annually with excitement and cultural significance. Our findings provide an interesting perspective on how the type of groundhog plays a significant role in accuracy of predictions and how this could potentially inform future predictions.  </span>
+<span id="cb6-14"><a href="#cb6-14"></a></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="fu">## Data collection </span></span>
+<span id="cb6-16"><a href="#cb6-16"></a></span>
+<span id="cb6-17"><a href="#cb6-17"></a>We source our data from tidytuesday, which provides two csv files, one for groundhog characteristics including their name, longitude, latitude, type of groundhog, to name a few. The second csv is a prediction data set that has information on the predictions made by groundhogs. The corresponding variable between the two data sets is the id variable that identifies each groundhog and can allow for us to merge the two data sets. It is important to note that the authors attempted to provide weather data to accompany this dataset, but have been unsuccessful so far. We explore additional weather data ourselves to supplement the tidytuesday data. The weather data is sourced from the National Centers for Environmental Information. With the weather data we will be able to determine the accuracy of the predictions. </span>
+<span id="cb6-18"><a href="#cb6-18"></a></span>
+<span id="cb6-21"><a href="#cb6-21"></a><span class="in">```{r}</span></span>
+<span id="cb6-22"><a href="#cb6-22"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb6-23"><a href="#cb6-23"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb6-24"><a href="#cb6-24"></a></span>
+<span id="cb6-25"><a href="#cb6-25"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span>
+<span id="cb6-26"><a href="#cb6-26"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span>
+<span id="cb6-27"><a href="#cb6-27"></a></span>
+<span id="cb6-28"><a href="#cb6-28"></a>groundhogs_all <span class="ot">&lt;-</span> predictions <span class="sc">|&gt;</span> </span>
+<span id="cb6-29"><a href="#cb6-29"></a>   <span class="fu">left_join</span>(groundhogs, <span class="fu">join_by</span>(id<span class="sc">==</span>id)) <span class="sc">|&gt;</span> </span>
+<span id="cb6-30"><a href="#cb6-30"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span>
+<span id="cb6-31"><a href="#cb6-31"></a><span class="in">```</span></span>
+<span id="cb6-32"><a href="#cb6-32"></a></span>
+<span id="cb6-33"><a href="#cb6-33"></a><span class="fu">## Data preparation </span></span>
+<span id="cb6-34"><a href="#cb6-34"></a></span>
+<span id="cb6-35"><a href="#cb6-35"></a>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</span>
+<span id="cb6-36"><a href="#cb6-36"></a></span>
+<span id="cb6-37"><a href="#cb6-37"></a></span>
+<span id="cb6-38"><a href="#cb6-38"></a><span class="fu">## Data visualization and Analysis</span></span>
+<span id="cb6-39"><a href="#cb6-39"></a></span>
+<span id="cb6-40"><a href="#cb6-40"></a>The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.</span>
+<span id="cb6-41"><a href="#cb6-41"></a> </span>
+<span id="cb6-42"><a href="#cb6-42"></a></span>
+<span id="cb6-43"><a href="#cb6-43"></a></span>
+<span id="cb6-44"><a href="#cb6-44"></a><span class="fu">## What is the story here?  </span></span>
+<span id="cb6-45"><a href="#cb6-45"></a></span>
+<span id="cb6-46"><a href="#cb6-46"></a>Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities. </span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
