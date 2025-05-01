@@ -3,7 +3,7 @@
 
 ## 📖 What is this GitHub repository about?
 
-This repository contains the code, data, and written analysis for our project titled **"[The Truth Behind Groundhog Accuracy: A Data-Driven Study]"**. The goal of the project is to [Explore accuracy of groundhog predictions by comparing it to actual weather data. We use visualizations including stacked bar graphs,scatter plots and maps for the investigation].
+This repository contains the code, data, and written analysis for our project titled **"The Truth Behind Groundhog Accuracy: A Data-Driven Study"**. The goal of the project is to Explore accuracy of groundhog predictions by comparing it to actual weather data. We use visualizations including stacked bar graphs,scatter plots and maps for the investigation.
 
 ## 🛠️ Required Software
 
