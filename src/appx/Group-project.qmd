@@ -98,6 +98,7 @@ groundhog_location <- tribble(
 )
 ```
 
+```
 
 ```{r}
 # Load Packages
@@ -114,6 +115,13 @@ groundhog_map <- leaflet(data = groundhog_location) |>
             colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Type")
 
 saveWidget(groundhog_map, file = "groundhog_map.html")
+
+
+```{r}
+#filtered data
+
+groundhogs_penn <- groundhogs_all |> 
+  filter(region == "Pennsylvania")
 
 ```
 
