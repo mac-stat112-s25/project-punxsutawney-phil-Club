@@ -5,11 +5,6 @@ execute:
 code-fold: false  # change to true to fold the code chunks
 ---
 
-Your report will go here.
-
-```{r}
-# this is a test code
-```
 
 # Report 
 
