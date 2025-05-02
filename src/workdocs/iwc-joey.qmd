@@ -66,3 +66,17 @@ leaflet(data = groundhog_location) |>
             colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Legend")
 ```
 
+## Background Information 
+
+Groundhog Day is a tradition where a groundhog **predicts the arrival of spring by observing its shadow**, celebrated annually on February 2nd with excitement and cultural significance.
+
+![](https://whyy.org/wp-content/uploads/2024/02/AP24026727480980.jpg)
+# What the Groundhog Prediction means? 
+
+**Shadow Means Winter Continues**
+If the groundhog sees its shadow, winter lasts six more weeks.
+
+**No Shadow Means an Early Spring**
+If no shadow is seen, spring arrives early.
+
+
