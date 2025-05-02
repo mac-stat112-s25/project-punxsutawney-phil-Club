@@ -5,6 +5,6 @@ format: html
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8FQNZpuIdOA?si=FXJ3zlL9NAVLq0gM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-<a href="https://docs.google.com/presentation/d/1TSY2TkTfaHW3k1ReXSmy6qyeEqEbU1xDbp3cKpmvArE/edit#slide=id.p10" target="_blank">
+<a href="https://docs.google.com/presentation/d/1TSY2TkTfaHW3k1ReXSmy6qyeEqEbU1xDbp3cKpmvArE/edit#slide=id" target="_blank">
   View Google Slides Presentation
 </a>
