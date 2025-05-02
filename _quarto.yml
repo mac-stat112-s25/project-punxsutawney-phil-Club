@@ -65,6 +65,7 @@ book:
 
 format:
   html:
+    code-fold: true
     theme: # bootswatch themes--other options https://bootswatch.com/
       light: flatly
       dark: darkly
