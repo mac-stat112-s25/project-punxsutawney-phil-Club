@@ -1,7 +1,7 @@
 ---
 title: "GroundHog Day Report"
 execute: 
-  echo: false      # change to true to show the code
+  echo: true      # change to true to show the code
 code-fold: false  # change to true to fold the code chunks
 ---
 
