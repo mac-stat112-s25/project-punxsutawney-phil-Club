@@ -290,7 +290,7 @@ cookieconsent.run({
 <main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/workdocs/iwc-joey.html">Individual Work Docs</a></li><li class="breadcrumb-item"><a href="../../src/workdocs/iwc-mayande.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">iwc-mayande</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
 <span class="chapter-number">10</span>&nbsp; <span class="chapter-title">iwc-mayande</span>
-</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -305,9 +305,9 @@ cookieconsent.run({
 
 
 </header><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Option 2: Read directly from GitHub</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Option 2: Read directly from GitHub</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 75 Columns: 17
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -318,8 +318,8 @@ lgl  (2): is_groundhog, active
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1462 Columns: 4
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -332,8 +332,8 @@ lgl (1): shadow
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
@@ -345,12 +345,12 @@ lgl (1): shadow
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(viridis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">library</span>(viridis)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: viridisLite</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 75 Columns: 17
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -361,8 +361,8 @@ lgl  (2): is_groundhog, active
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1462 Columns: 4
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -373,15 +373,16 @@ lgl (1): shadow
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>groundhogs_all <span class="ot">&lt;-</span> predictions <span class="sc">|&gt;</span> </span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>groundhogs_all <span class="ot">&lt;-</span> predictions <span class="sc">|&gt;</span> </span>
 <span id="cb13-2"><a href="#cb13-2"></a>   <span class="fu">left_join</span>(groundhogs, <span class="fu">join_by</span>(id<span class="sc">==</span>id)) <span class="sc">|&gt;</span> </span>
 <span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Read Weather Data </span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Read Weather Data </span></span>
 <span id="cb14-2"><a href="#cb14-2"></a><span class="fu">library</span>(readr)</span>
 <span id="cb14-3"><a href="#cb14-3"></a>Actual_weather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../../data/data.csv"</span>, <span class="at">skip =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 130 Columns: 2
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -392,33 +393,36 @@ dbl (2): Date, Value
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>Actual_weather <span class="ot">&lt;-</span> Actual_weather <span class="sc">|&gt;</span> </span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>Actual_weather <span class="ot">&lt;-</span> Actual_weather <span class="sc">|&gt;</span> </span>
 <span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.numeric</span> (<span class="fu">str_sub</span>(Date, <span class="dv">1</span>,<span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_all<span class="sc">|&gt;</span> </span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_all<span class="sc">|&gt;</span> </span>
 <span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">left_join</span>(Actual_weather, <span class="fu">join_by</span>(year <span class="sc">==</span> year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_final <span class="sc">%&gt;%</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_final <span class="sc">%&gt;%</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">mutate</span>(<span class="at">earlyspring =</span> Value <span class="sc">&gt;=</span> <span class="dv">37</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">mutate</span>(<span class="at">accuracy =</span> shadow <span class="sc">!=</span> earlyspring) <span class="sc">|&gt;</span></span>
 <span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">str_replace</span>(type, <span class="st">"Taxidermied groundhogs"</span>, <span class="st">"Taxidermied groundhog"</span>)) <span class="sc">|&gt;</span> </span>
 <span id="cb18-5"><a href="#cb18-5"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(accuracy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> accuracy, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> accuracy, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
 <span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Type of Groundhog"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">5</span>)) <span class="sc">+</span></span>
 <span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Groundhog Accuracy"</span>, <span class="at">y =</span> <span class="st">"Count Predictions"</span>, <span class="at">title =</span> <span class="st">"Accuracy of Groundhog Predictions"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>, <span class="at">alt =</span> <span class="st">"Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much"</span>) <span class="sc">+</span></span>
 <span id="cb19-5"><a href="#cb19-5"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="iwc-mayande_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">fill =</span> accuracy)) <span class="sc">+</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">fill =</span> accuracy)) <span class="sc">+</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>, <span class="at">color =</span> <span class="st">"white"</span>)<span class="sc">+</span></span>
 <span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Groundhog Accuracy"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)) <span class="sc">+</span></span>
 <span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Type of Groundhog"</span>, <span class="at">y =</span> <span class="st">"Percent of Predictions"</span>, <span class="at">title =</span> <span class="st">"Proportion of Acurate Groundhog Predictions by Type"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>) <span class="sc">+</span></span>
@@ -426,18 +430,18 @@ dbl (2): Date, Value
 <span id="cb20-6"><a href="#cb20-6"></a>  <span class="fu">theme</span>(</span>
 <span id="cb20-7"><a href="#cb20-7"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">15</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
 <span id="cb20-8"><a href="#cb20-8"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="iwc-mayande_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Value, <span class="at">color =</span> accuracy)) <span class="sc">+</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Value, <span class="at">color =</span> accuracy)) <span class="sc">+</span></span>
 <span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">scale_color_manual</span>(<span class="st">"Groundhog Accuracy"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)) <span class="sc">+</span></span>
 <span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year of Prediction"</span>, <span class="at">y =</span> <span class="st">"Average Temperature"</span>, <span class="at">title =</span> <span class="st">"Prediction Acuracy by Temperature Over Time"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>) <span class="sc">+</span></span>
 <span id="cb21-5"><a href="#cb21-5"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="iwc-mayande_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -447,8 +451,8 @@ dbl (2): Date, Value
 <section id="map-of-groundhogs-in-pennsylvania" class="level1" data-number="11"><h1 data-number="11">
 <span class="header-section-number">11</span> Map of Groundhogs in Pennsylvania</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">library</span>(mosaic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">library</span>(mosaic)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Registered S3 method overwritten by 'mosaic':
   method                           from   
   fortify.SpatialPolygonsDataFrame ggplot2</code></pre>
@@ -493,7 +497,7 @@ Attaching package: 'mosaic'</code></pre>
 
     max, mean, min, prod, range, sample, sum</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">#Tribble dataset</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">#Tribble dataset</span></span>
 <span id="cb32-2"><a href="#cb32-2"></a></span>
 <span id="cb32-3"><a href="#cb32-3"></a>groundhog_location <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
 <span id="cb32-4"><a href="#cb32-4"></a>  <span class="sc">~</span>name, <span class="sc">~</span>longitude, <span class="sc">~</span>latitude, <span class="sc">~</span>type,</span>
@@ -513,11 +517,12 @@ Attaching package: 'mosaic'</code></pre>
 <span id="cb32-18"><a href="#cb32-18"></a>  <span class="st">"Poppy the Groundhog"</span>, <span class="sc">-</span><span class="fl">76.66445</span>, <span class="fl">40.12133</span>, <span class="st">"Groundhog"</span>,</span>
 <span id="cb32-19"><a href="#cb32-19"></a>  <span class="st">"MT Parker"</span>, <span class="sc">-</span><span class="fl">76.30730</span>, <span class="fl">40.05880</span>, <span class="st">"Plush groundhog"</span></span>
 <span id="cb32-20"><a href="#cb32-20"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Load Packages</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Load Packages</span></span>
 <span id="cb33-2"><a href="#cb33-2"></a><span class="fu">library</span>(gplots)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+</details><div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'gplots'</code></pre>
 </div>
@@ -526,7 +531,7 @@ Attaching package: 'gplots'</code></pre>
 
     lowess</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">library</span>(leaflet)</span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">library</span>(leaflet)</span>
 <span id="cb36-2"><a href="#cb36-2"></a><span class="fu">library</span>(htmlwidgets)</span>
 <span id="cb36-3"><a href="#cb36-3"></a></span>
 <span id="cb36-4"><a href="#cb36-4"></a></span>
@@ -536,10 +541,11 @@ Attaching package: 'gplots'</code></pre>
 <span id="cb36-8"><a href="#cb36-8"></a>  <span class="fu">addCircles</span>(<span class="at">color =</span> <span class="sc">~</span><span class="fu">colorFactor</span>(<span class="fu">c</span>(<span class="st">"darkred"</span>,<span class="st">"darkgreen"</span>,<span class="st">"red"</span>,<span class="st">"darkblue"</span>,<span class="st">"orange"</span>), <span class="at">domain=</span> groundhog_location<span class="sc">$</span>type)(type), <span class="at">label =</span> groundhog_location<span class="sc">$</span>name) <span class="sc">|&gt;</span></span>
 <span id="cb36-9"><a href="#cb36-9"></a>   <span class="fu">addLegend</span>(<span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
 <span id="cb36-10"><a href="#cb36-10"></a>            <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"darkred"</span>,<span class="st">"darkgreen"</span>,<span class="st">"red"</span>,<span class="st">"darkblue"</span>,<span class="st">"orange"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Groundhog"</span>,<span class="st">"Groundhog Puppet"</span>, <span class="st">"Person in a groundhog suit"</span>, <span class="st">"Plush groundhog"</span>,<span class="st">"Taxidermied groundhog"</span>), <span class="at">title =</span><span class="st">"Type"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Assuming "longitude" and "latitude" are longitude and latitude, respectively</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">saveWidget</span>(groundhog_map, <span class="at">file =</span> <span class="st">"groundhog_map.html"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">saveWidget</span>(groundhog_map, <span class="at">file =</span> <span class="st">"groundhog_map.html"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 
 

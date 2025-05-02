@@ -286,7 +286,7 @@ cookieconsent.run({
 <main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/eda/EDA-zeke.html">EDA</a></li><li class="breadcrumb-item"><a href="../../src/eda/EDA-mayande.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">EDA-mayande</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
 <span class="chapter-number">7</span>&nbsp; <span class="chapter-title">EDA-mayande</span>
-</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -301,16 +301,16 @@ cookieconsent.run({
 
 
 </header><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(SmartEDA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(SmartEDA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Registered S3 method overwritten by 'GGally':
   method from   
   +.gg   ggplot2</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 75 Columns: 17
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -321,8 +321,8 @@ lgl  (2): is_groundhog, active
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1462 Columns: 4
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
@@ -335,8 +335,8 @@ lgl (1): shadow
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ExpData</span>(groundhogs, <span class="at">type =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">ExpData</span>(groundhogs, <span class="at">type =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>                                          Descriptions       Value
 1                                   Sample size (nrow)          75
 2                              No. of variables (ncol)          17
@@ -352,8 +352,8 @@ lgl (1): shadow
 12 %. of variables having &gt;=50% and &lt;90% missing cases      0% (0)
 13          %. of variables having &gt;=90% missing cases      0% (0)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ExpData</span>(predictions, <span class="at">type =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ExpData</span>(predictions, <span class="at">type =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>                                          Descriptions   Value
 1                                   Sample size (nrow)    1462
 2                              No. of variables (ncol)       4
@@ -371,8 +371,8 @@ lgl (1): shadow
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ExpCatViz</span>(groundhogs, <span class="at">target =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ExpCatViz</span>(groundhogs, <span class="at">target =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>[[1]]</code></pre>
 </div>
 <div class="cell-output-display">
@@ -1027,21 +1027,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb13-10"><a href="#cb13-10"></a><span class="fu">library</span>(SmartEDA)</span>
 <span id="cb13-11"><a href="#cb13-11"></a><span class="in">```</span></span>
 <span id="cb13-12"><a href="#cb13-12"></a></span>
-<span id="cb13-15"><a href="#cb13-15"></a><span class="in">```{r}</span></span>
-<span id="cb13-16"><a href="#cb13-16"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span>
-<span id="cb13-17"><a href="#cb13-17"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span>
-<span id="cb13-18"><a href="#cb13-18"></a></span>
-<span id="cb13-19"><a href="#cb13-19"></a><span class="in">```</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a></span>
+<span id="cb13-14"><a href="#cb13-14"></a></span>
+<span id="cb13-17"><a href="#cb13-17"></a><span class="in">```{r}</span></span>
+<span id="cb13-18"><a href="#cb13-18"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span>
+<span id="cb13-19"><a href="#cb13-19"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span>
 <span id="cb13-20"><a href="#cb13-20"></a></span>
-<span id="cb13-21"><a href="#cb13-21"></a></span>
-<span id="cb13-24"><a href="#cb13-24"></a><span class="in">```{r}</span></span>
-<span id="cb13-25"><a href="#cb13-25"></a><span class="fu">ExpData</span>(groundhogs, <span class="at">type =</span> <span class="dv">1</span>)</span>
-<span id="cb13-26"><a href="#cb13-26"></a><span class="fu">ExpData</span>(predictions, <span class="at">type =</span> <span class="dv">1</span>)</span>
-<span id="cb13-27"><a href="#cb13-27"></a><span class="in">```</span></span>
-<span id="cb13-30"><a href="#cb13-30"></a><span class="in">```{r}</span></span>
-<span id="cb13-31"><a href="#cb13-31"></a><span class="fu">ExpCatViz</span>(groundhogs, <span class="at">target =</span> <span class="cn">NULL</span>)</span>
-<span id="cb13-32"><a href="#cb13-32"></a><span class="in">```</span></span>
-<span id="cb13-33"><a href="#cb13-33"></a></span>
+<span id="cb13-21"><a href="#cb13-21"></a><span class="in">```</span></span>
+<span id="cb13-22"><a href="#cb13-22"></a></span>
+<span id="cb13-23"><a href="#cb13-23"></a></span>
+<span id="cb13-26"><a href="#cb13-26"></a><span class="in">```{r}</span></span>
+<span id="cb13-27"><a href="#cb13-27"></a><span class="fu">ExpData</span>(groundhogs, <span class="at">type =</span> <span class="dv">1</span>)</span>
+<span id="cb13-28"><a href="#cb13-28"></a><span class="fu">ExpData</span>(predictions, <span class="at">type =</span> <span class="dv">1</span>)</span>
+<span id="cb13-29"><a href="#cb13-29"></a><span class="in">```</span></span>
+<span id="cb13-32"><a href="#cb13-32"></a><span class="in">```{r}</span></span>
+<span id="cb13-33"><a href="#cb13-33"></a><span class="fu">ExpCatViz</span>(groundhogs, <span class="at">target =</span> <span class="cn">NULL</span>)</span>
+<span id="cb13-34"><a href="#cb13-34"></a><span class="in">```</span></span>
+<span id="cb13-35"><a href="#cb13-35"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

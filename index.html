@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Zeke Friendly">
 <meta name="author" content="Mayande Mamba">
 <meta name="author" content="Jeoy Gebin">
-
 <title>The Truth Behind Groundhog Accuracy: A Data-Driven Study</title>
 <style>
 code{white-space: pre-wrap;}
@@ -59,7 +56,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -79,8 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -106,9 +101,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-<script type="text/javascript" charset="UTF-8">
+}</script><script type="text/javascript" charset="UTF-8">
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({
   "notice_banner_type":"simple",
@@ -123,20 +116,17 @@ cookieconsent.run({
 "language":"en"
   });
 });
-</script> 
-  
-<style>html{ scroll-behavior: smooth; }</style>
-
-
-<link rel="stylesheet" href="style/custom.css">
+</script><style>html{ scroll-behavior: smooth; }</style>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script><link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="site_libs/proj4-2.6.2/proj4.min.js"></script><script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="site_libs/leaflet-binding-2.2.2/leaflet.js"></script><link rel="stylesheet" href="style/custom.css">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -147,13 +137,9 @@ cookieconsent.run({
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">sidebar title</a> 
         <div class="sidebar-tools-main">
@@ -173,7 +159,7 @@ cookieconsent.run({
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Report</span></span></a>
@@ -187,8 +173,8 @@ cookieconsent.run({
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./src/et/zeke-f.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">teamwork-zeke</span></span></a>
@@ -207,7 +193,7 @@ cookieconsent.run({
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -216,8 +202,8 @@ cookieconsent.run({
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./src/eda/EDA-zeke.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">EDA-zeke</span></span></a>
@@ -236,7 +222,7 @@ cookieconsent.run({
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
@@ -245,8 +231,8 @@ cookieconsent.run({
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./src/workdocs/iwc-joey.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">iwc-joey</span></span></a>
@@ -265,7 +251,7 @@ cookieconsent.run({
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
@@ -274,8 +260,8 @@ cookieconsent.run({
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./src/appx/proposal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Proposal</span></span></a>
@@ -294,33 +280,35 @@ cookieconsent.run({
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#report" id="toc-report" class="nav-link active" data-scroll-target="#report"><span class="header-section-number">1</span> Report</a>
+<li>
+<a href="#report" id="toc-report" class="nav-link active" data-scroll-target="#report"><span class="header-section-number">1</span> Report</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1.1</span> Introduction</a></li>
-  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><span class="header-section-number">1.2</span> Data collection</a></li>
-  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><span class="header-section-number">1.3</span> Data preparation</a></li>
-  <li><a href="#data-visualization-and-analysis" id="toc-data-visualization-and-analysis" class="nav-link" data-scroll-target="#data-visualization-and-analysis"><span class="header-section-number">1.4</span> Data visualization and Analysis</a></li>
-  <li><a href="#what-is-the-story-here" id="toc-what-is-the-story-here" class="nav-link" data-scroll-target="#what-is-the-story-here"><span class="header-section-number">1.5</span> What is the story here?</a></li>
-  </ul></li>
+<li>
+<a href="#background-information" id="toc-background-information" class="nav-link" data-scroll-target="#background-information"><span class="header-section-number">1.1</span> Background Information</a>
+  <ul class="collapse">
+<li><a href="#what-the-groundhog-prediction-means" id="toc-what-the-groundhog-prediction-means" class="nav-link" data-scroll-target="#what-the-groundhog-prediction-means"><span class="header-section-number">1.1.1</span> What the Groundhog Prediction means?</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1.2</span> Introduction</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><span class="header-section-number">1.3</span> Data collection</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><span class="header-section-number">1.4</span> Data preparation</a></li>
+  <li><a href="#data-visualization-and-analysis" id="toc-data-visualization-and-analysis" class="nav-link" data-scroll-target="#data-visualization-and-analysis"><span class="header-section-number">1.5</span> Data visualization and Analysis</a></li>
+  <li><a href="#what-is-the-story-here" id="toc-what-is-the-story-here" class="nav-link" data-scroll-target="#what-is-the-story-here"><span class="header-section-number">1.6</span> What is the story here?</a></li>
+  </ul>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">The Truth Behind Groundhog Accuracy: A Data-Driven Study</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -340,7 +328,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Thursday, May 1, 2025</p>
+      <p class="date">Friday, May 2, 2025</p>
     </div>
   </div>
   
@@ -349,39 +337,181 @@ cookieconsent.run({
   
 
 
-</header>
-
-
-<section id="report" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Report</h1>
-<section id="introduction" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1.1</span> Introduction</h2>
+</header><section id="report" class="level1" data-number="1"><h1 data-number="1">
+<span class="header-section-number">1</span> Report</h1>
+<section id="background-information" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="background-information">
+<span class="header-section-number">1.1</span> Background Information</h2>
+<p>Groundhog Day is a tradition where a groundhog <strong>predicts the arrival of spring by observing its shadow</strong>, celebrated annually on February 2nd with excitement and cultural significance.</p>
+<p><img src="https://whyy.org/wp-content/uploads/2024/02/AP24026727480980.jpg" class="img-fluid"></p>
+<section id="what-the-groundhog-prediction-means" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="what-the-groundhog-prediction-means">
+<span class="header-section-number">1.1.1</span> What the Groundhog Prediction means?</h3>
+<p><strong>Shadow Means Winter Continues</strong> If the groundhog sees its shadow, winter lasts six more weeks.</p>
+<p><strong>No Shadow Means an Early Spring</strong> If no shadow is seen, spring arrives early.</p>
+</section></section><section id="introduction" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="introduction">
+<span class="header-section-number">1.2</span> Introduction</h2>
 <p>Our analysis focuses on the longstanding weather prediction using groundhogs. We are curious to explore how effective groundhogs actually are in making predictions of weather. Groundhog Day, which is the event our research is based on, is a tradition where a groundhog predicts the arrival of spring by observing its shadow, celebrated annually with excitement and cultural significance. Our findings provide an interesting perspective on how the type of groundhog plays a significant role in accuracy of predictions and how this could potentially inform future predictions.</p>
-</section>
-<section id="data-collection" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="data-collection"><span class="header-section-number">1.2</span> Data collection</h2>
+</section><section id="data-collection" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="data-collection">
+<span class="header-section-number">1.3</span> Data collection</h2>
 <p>We source our data from tidytuesday, which provides two csv files, one for groundhog characteristics including their name, longitude, latitude, type of groundhog, to name a few. The second csv is a prediction data set that has information on the predictions made by groundhogs. The corresponding variable between the two data sets is the id variable that identifies each groundhog and can allow for us to merge the two data sets. It is important to note that the authors attempted to provide weather data to accompany this dataset, but have been unsuccessful so far. We explore additional weather data ourselves to supplement the tidytuesday data. The weather data is sourced from the National Centers for Environmental Information. With the weather data we will be able to determine the accuracy of the predictions.</p>
-</section>
-<section id="data-preparation" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="data-preparation"><span class="header-section-number">1.3</span> Data preparation</h2>
-<p>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</p>
-</section>
-<section id="data-visualization-and-analysis" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="data-visualization-and-analysis"><span class="header-section-number">1.4</span> Data visualization and Analysis</h2>
-<p>The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.</p>
-</section>
-<section id="what-is-the-story-here" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="what-is-the-story-here"><span class="header-section-number">1.5</span> What is the story here?</h2>
+</section><section id="data-preparation" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="data-preparation">
+<span class="header-section-number">1.4</span> Data preparation</h2>
+<p>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from 1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 75 Columns: 17
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (11): slug, shortname, name, city, region, country, source, current_pred...
+dbl  (4): id, latitude, longitude, predictions_count
+lgl  (2): is_groundhog, active
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1462 Columns: 4
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): details
+dbl (2): id, year
+lgl (1): shadow
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>groundhogs_all <span class="ot">&lt;-</span> predictions <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a>   <span class="fu">left_join</span>(groundhogs, <span class="fu">join_by</span>(id<span class="sc">==</span>id)) <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>Actual_weather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/data.csv"</span>, <span class="at">skip =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 130 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (2): Date, Value
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>Actual_weather <span class="ot">&lt;-</span> Actual_weather <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.numeric</span> (<span class="fu">str_sub</span>(Date, <span class="dv">1</span>,<span class="dv">4</span>)))</span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_all<span class="sc">|&gt;</span> </span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">left_join</span>(Actual_weather, <span class="fu">join_by</span>(year <span class="sc">==</span> year))</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_final <span class="sc">%&gt;%</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">mutate</span>(<span class="at">earlyspring =</span> Value <span class="sc">&gt;=</span> <span class="dv">37</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb7-9"><a href="#cb7-9"></a>  <span class="fu">mutate</span>(<span class="at">accuracy =</span> shadow <span class="sc">!=</span> earlyspring) <span class="sc">|&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">str_replace</span>(type, <span class="st">"Taxidermied groundhogs"</span>, <span class="st">"Taxidermied groundhog"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-11"><a href="#cb7-11"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(accuracy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="data-visualization-and-analysis" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="data-visualization-and-analysis">
+<span class="header-section-number">1.5</span> Data visualization and Analysis</h2>
+<p>The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> accuracy, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Type of Groundhog"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Groundhog Accuracy"</span>, <span class="at">y =</span> <span class="st">"Count Predictions"</span>, <span class="at">title =</span> <span class="st">"Accuracy of Groundhog Predictions"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>, <span class="at">alt =</span> <span class="st">"Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much"</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">y =</span> type, <span class="at">fill =</span> accuracy)) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>, <span class="at">color =</span> <span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Groundhog Accuracy"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Percent of Predictions"</span>, <span class="at">y =</span> <span class="st">"Type of Groundhog"</span>, <span class="at">title =</span> <span class="st">"Proportion of Acurate Groundhog Predictions by Type"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Value, <span class="at">color =</span> accuracy)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">scale_color_manual</span>(<span class="st">"Groundhog Accuracy"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year of Prediction"</span>, <span class="at">y =</span> <span class="st">"Average Temperature"</span>, <span class="at">title =</span> <span class="st">"Prediction Acuracy by Temperature Over Time"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>) <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">37</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure"><p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">library</span>(mosaic)</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="co">#Tribble dataset</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a>groundhog_location <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb11-6"><a href="#cb11-6"></a>  <span class="sc">~</span>name, <span class="sc">~</span>longitude, <span class="sc">~</span>latitude, <span class="sc">~</span>type,</span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="st">"Punxsutawney Phil"</span>,<span class="sc">-</span><span class="fl">78.96225</span>, <span class="fl">40.9312</span>, <span class="st">"Groundhog"</span>, </span>
+<span id="cb11-8"><a href="#cb11-8"></a>  <span class="st">"Octoraro Orphie"</span>, <span class="sc">-</span><span class="fl">76.09196</span>, <span class="fl">39.82554</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb11-9"><a href="#cb11-9"></a>  <span class="st">"Schnogadahl Sammi"</span>,<span class="sc">-</span><span class="fl">75.49787</span>, <span class="fl">40.90142</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb11-10"><a href="#cb11-10"></a>  <span class="st">"Poor Richard"</span>, <span class="sc">-</span><span class="fl">76.72926</span>, <span class="fl">39.96586</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="st">"Uni the Groundhog"</span>, <span class="sc">-</span><span class="fl">76.29992</span>, <span class="fl">40.41813</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb11-12"><a href="#cb11-12"></a>  <span class="st">"Grover and Sue"</span>, <span class="sc">-</span><span class="fl">76.36766</span>, <span class="fl">40.57162</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb11-13"><a href="#cb11-13"></a>  <span class="st">"Dover Doug"</span>, <span class="sc">-</span><span class="fl">76.85717</span>, <span class="fl">39.99791</span>, <span class="st">"Person in a groundhog suit"</span>,</span>
+<span id="cb11-14"><a href="#cb11-14"></a>  <span class="st">"Lawrenceville Lucy"</span>, <span class="sc">-</span><span class="fl">77.20171</span>, <span class="fl">41.97356</span>, <span class="st">"Groundhog"</span>,</span>
+<span id="cb11-15"><a href="#cb11-15"></a>  <span class="st">"Mount Joy Minnie"</span>, <span class="sc">-</span><span class="fl">76.50431</span>, <span class="fl">40.10912</span>, <span class="st">"Plush groundhog"</span>,</span>
+<span id="cb11-16"><a href="#cb11-16"></a>  <span class="st">"Patty Pagoda"</span>, <span class="sc">-</span><span class="fl">75.90783</span>, <span class="fl">40.33607</span>, <span class="st">"Person in a groundhog suit"</span>,</span>
+<span id="cb11-17"><a href="#cb11-17"></a>  <span class="st">"Tinicum Tim"</span>, <span class="sc">-</span><span class="fl">75.25721</span>, <span class="fl">39.89215</span>, <span class="st">"Groundhog puppet"</span>,</span>
+<span id="cb11-18"><a href="#cb11-18"></a>  <span class="st">"Harleysville Hank"</span>, <span class="sc">-</span><span class="fl">75.38234</span>, <span class="fl">40.29050</span>, <span class="st">"Plush groundhog"</span>,</span>
+<span id="cb11-19"><a href="#cb11-19"></a>  <span class="st">"Mount Gretna Grady"</span>, <span class="sc">-</span><span class="fl">76.46776</span>, <span class="fl">40.24677</span>, <span class="st">"Plush groundhog"</span>,</span>
+<span id="cb11-20"><a href="#cb11-20"></a>  <span class="st">"Poppy the Groundhog"</span>, <span class="sc">-</span><span class="fl">76.66445</span>, <span class="fl">40.12133</span>, <span class="st">"Groundhog"</span>,</span>
+<span id="cb11-21"><a href="#cb11-21"></a>  <span class="st">"MT Parker"</span>, <span class="sc">-</span><span class="fl">76.30730</span>, <span class="fl">40.05880</span>, <span class="st">"Plush groundhog"</span></span>
+<span id="cb11-22"><a href="#cb11-22"></a>)</span>
+<span id="cb11-23"><a href="#cb11-23"></a></span>
+<span id="cb11-24"><a href="#cb11-24"></a><span class="fu">library</span>(gplots)</span>
+<span id="cb11-25"><a href="#cb11-25"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb11-26"><a href="#cb11-26"></a><span class="fu">library</span>(htmlwidgets)</span>
+<span id="cb11-27"><a href="#cb11-27"></a></span>
+<span id="cb11-28"><a href="#cb11-28"></a></span>
+<span id="cb11-29"><a href="#cb11-29"></a><span class="co">#Map</span></span>
+<span id="cb11-30"><a href="#cb11-30"></a><span class="fu">leaflet</span>(<span class="at">data =</span> groundhog_location) <span class="sc">|&gt;</span></span>
+<span id="cb11-31"><a href="#cb11-31"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-32"><a href="#cb11-32"></a>  <span class="fu">addCircles</span>(<span class="at">color =</span> <span class="sc">~</span><span class="fu">colorFactor</span>(<span class="fu">c</span>(<span class="st">"darkred"</span>,<span class="st">"darkgreen"</span>,<span class="st">"red"</span>,<span class="st">"darkblue"</span>,<span class="st">"orange"</span>), <span class="at">domain=</span> groundhog_location<span class="sc">$</span>type)(type), <span class="at">label =</span> groundhog_location<span class="sc">$</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb11-33"><a href="#cb11-33"></a>   <span class="fu">addLegend</span>(<span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb11-34"><a href="#cb11-34"></a>            <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"darkred"</span>,<span class="st">"darkgreen"</span>,<span class="st">"red"</span>,<span class="st">"darkblue"</span>,<span class="st">"orange"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Groundhog"</span>,<span class="st">"Groundhog Puppet"</span>, <span class="st">"Person in a groundhog suit"</span>, <span class="st">"Plush groundhog"</span>,<span class="st">"Taxidermied groundhog"</span>), <span class="at">title =</span><span class="st">"Legend"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Assuming "longitude" and "latitude" are longitude and latitude, respectively</code></pre>
+</div>
+<div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-be99c738a5960e493213" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-be99c738a5960e493213">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircles","args":[[40.9312,39.82554,40.90142,39.96586,40.41813,40.57162,39.99791,41.97356,40.10912,40.33607,39.89215,40.2905,40.24677,40.12133,40.0588],[-78.96225,-76.09196,-75.49787000000001,-76.72926,-76.29992,-76.36766,-76.85717,-77.20171000000001,-76.50431,-75.90783,-75.25721,-75.38234,-76.46776,-76.66445,-76.3073],10,null,null,{"interactive":true,"className":"","stroke":true,"color":["#8B0000","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FF0000","#8B0000","#00008B","#FF0000","#006400","#00008B","#00008B","#8B0000","#00008B"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#8B0000","#FFA500","#FFA500","#FFA500","#FFA500","#FFA500","#FF0000","#8B0000","#00008B","#FF0000","#006400","#00008B","#00008B","#8B0000","#00008B"],"fillOpacity":0.2},null,null,["Punxsutawney Phil","Octoraro Orphie","Schnogadahl Sammi","Poor Richard","Uni the Groundhog","Grover and Sue","Dover Doug","Lawrenceville Lucy","Mount Joy Minnie","Patty Pagoda","Tinicum Tim","Harleysville Hank","Mount Gretna Grady","Poppy the Groundhog","MT Parker"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addLegend","args":[{"colors":["darkred","darkgreen","red","darkblue","orange"],"labels":["Groundhog","Groundhog Puppet","Person in a groundhog suit","Plush groundhog","Taxidermied groundhog"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"unknown","title":"Legend","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[39.82554,41.97356],"lng":[-78.96225,-75.25721]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#filtered data</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>groundhogs_penn <span class="ot">&lt;-</span> groundhogs_all <span class="sc">|&gt;</span> </span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="what-is-the-story-here" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="what-is-the-story-here">
+<span class="header-section-number">1.6</span> What is the story here?</h2>
 <p>Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities.</p>
 
 
 <!-- -->
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1000,9 +1130,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation column-body"><div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
       <a href="./src/et/zeke-f.html" class="pagination-link" aria-label="teamwork-zeke">
@@ -1010,43 +1138,159 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="an">title:</span><span class="co"> "Report"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="an">execute:</span><span class="co"> </span></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co">  echo: true      # change to true to show the code</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="an">code-fold:</span><span class="co"> false  # change to true to fold the code chunks</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="co">---</span></span>
-<span id="cb1-7"><a href="#cb1-7"></a></span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="fu"># Report </span></span>
-<span id="cb1-10"><a href="#cb1-10"></a></span>
-<span id="cb1-11"><a href="#cb1-11"></a><span class="fu">## Introduction</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a>Our analysis focuses on the longstanding weather prediction using groundhogs. We are curious to explore how effective groundhogs actually are in making predictions of weather. Groundhog Day, which is the event our research is based on, is a tradition where a groundhog predicts the arrival of spring by observing its shadow, celebrated annually with excitement and cultural significance. Our findings provide an interesting perspective on how the type of groundhog plays a significant role in accuracy of predictions and how this could potentially inform future predictions.  </span>
-<span id="cb1-14"><a href="#cb1-14"></a></span>
-<span id="cb1-15"><a href="#cb1-15"></a><span class="fu">## Data collection </span></span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a>We source our data from tidytuesday, which provides two csv files, one for groundhog characteristics including their name, longitude, latitude, type of groundhog, to name a few. The second csv is a prediction data set that has information on the predictions made by groundhogs. The corresponding variable between the two data sets is the id variable that identifies each groundhog and can allow for us to merge the two data sets. It is important to note that the authors attempted to provide weather data to accompany this dataset, but have been unsuccessful so far. We explore additional weather data ourselves to supplement the tidytuesday data. The weather data is sourced from the National Centers for Environmental Information. With the weather data we will be able to determine the accuracy of the predictions. </span>
-<span id="cb1-18"><a href="#cb1-18"></a></span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a><span class="fu">## Data preparation </span></span>
-<span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="fu">## Data visualization and Analysis</span></span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a>The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.</span>
-<span id="cb1-28"><a href="#cb1-28"></a> </span>
-<span id="cb1-29"><a href="#cb1-29"></a></span>
-<span id="cb1-30"><a href="#cb1-30"></a></span>
-<span id="cb1-31"><a href="#cb1-31"></a><span class="fu">## What is the story here?  </span></span>
-<span id="cb1-32"><a href="#cb1-32"></a></span>
-<span id="cb1-33"><a href="#cb1-33"></a>Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities. </span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1"></a><span class="co">---</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="an">title:</span><span class="co"> "Report"</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co">  echo: true      # change to true to show the code</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="an">code-fold:</span><span class="co"> false  # change to true to fold the code chunks</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a><span class="co">---</span></span>
+<span id="cb14-7"><a href="#cb14-7"></a></span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="fu"># Report </span></span>
+<span id="cb14-10"><a href="#cb14-10"></a></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="fu">## Background Information </span></span>
+<span id="cb14-12"><a href="#cb14-12"></a></span>
+<span id="cb14-13"><a href="#cb14-13"></a>Groundhog Day is a tradition where a groundhog **predicts the arrival of spring by observing its shadow**, celebrated annually on February 2nd with excitement and cultural significance.</span>
+<span id="cb14-14"><a href="#cb14-14"></a></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="al">![](https://whyy.org/wp-content/uploads/2024/02/AP24026727480980.jpg)</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a></span>
+<span id="cb14-17"><a href="#cb14-17"></a></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="fu">### What the Groundhog Prediction means? </span></span>
+<span id="cb14-19"><a href="#cb14-19"></a></span>
+<span id="cb14-20"><a href="#cb14-20"></a>**Shadow Means Winter Continues**</span>
+<span id="cb14-21"><a href="#cb14-21"></a>If the groundhog sees its shadow, winter lasts six more weeks.</span>
+<span id="cb14-22"><a href="#cb14-22"></a></span>
+<span id="cb14-23"><a href="#cb14-23"></a>**No Shadow Means an Early Spring**</span>
+<span id="cb14-24"><a href="#cb14-24"></a>If no shadow is seen, spring arrives early.</span>
+<span id="cb14-25"><a href="#cb14-25"></a></span>
+<span id="cb14-26"><a href="#cb14-26"></a><span class="fu">## Introduction</span></span>
+<span id="cb14-27"><a href="#cb14-27"></a></span>
+<span id="cb14-28"><a href="#cb14-28"></a>Our analysis focuses on the longstanding weather prediction using groundhogs. We are curious to explore how effective groundhogs actually are in making predictions of weather. Groundhog Day, which is the event our research is based on, is a tradition where a groundhog predicts the arrival of spring by observing its shadow, celebrated annually with excitement and cultural significance. Our findings provide an interesting perspective on how the type of groundhog plays a significant role in accuracy of predictions and how this could potentially inform future predictions.  </span>
+<span id="cb14-29"><a href="#cb14-29"></a></span>
+<span id="cb14-30"><a href="#cb14-30"></a><span class="fu">## Data collection </span></span>
+<span id="cb14-31"><a href="#cb14-31"></a></span>
+<span id="cb14-32"><a href="#cb14-32"></a>We source our data from tidytuesday, which provides two csv files, one for groundhog characteristics including their name, longitude, latitude, type of groundhog, to name a few. The second csv is a prediction data set that has information on the predictions made by groundhogs. The corresponding variable between the two data sets is the id variable that identifies each groundhog and can allow for us to merge the two data sets. It is important to note that the authors attempted to provide weather data to accompany this dataset, but have been unsuccessful so far. We explore additional weather data ourselves to supplement the tidytuesday data. The weather data is sourced from the National Centers for Environmental Information. With the weather data we will be able to determine the accuracy of the predictions. </span>
+<span id="cb14-33"><a href="#cb14-33"></a></span>
+<span id="cb14-34"><a href="#cb14-34"></a></span>
+<span id="cb14-35"><a href="#cb14-35"></a><span class="fu">## Data preparation </span></span>
+<span id="cb14-36"><a href="#cb14-36"></a></span>
+<span id="cb14-37"><a href="#cb14-37"></a>The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from 1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.</span>
+<span id="cb14-38"><a href="#cb14-38"></a></span>
+<span id="cb14-41"><a href="#cb14-41"></a><span class="in">```{r}</span></span>
+<span id="cb14-42"><a href="#cb14-42"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-43"><a href="#cb14-43"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb14-44"><a href="#cb14-44"></a><span class="fu">library</span>(readr)</span>
+<span id="cb14-45"><a href="#cb14-45"></a></span>
+<span id="cb14-46"><a href="#cb14-46"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv'</span>)</span>
+<span id="cb14-47"><a href="#cb14-47"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv'</span>)</span>
+<span id="cb14-48"><a href="#cb14-48"></a></span>
+<span id="cb14-49"><a href="#cb14-49"></a>groundhogs_all <span class="ot">&lt;-</span> predictions <span class="sc">|&gt;</span> </span>
+<span id="cb14-50"><a href="#cb14-50"></a>   <span class="fu">left_join</span>(groundhogs, <span class="fu">join_by</span>(id<span class="sc">==</span>id)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-51"><a href="#cb14-51"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span>
+<span id="cb14-52"><a href="#cb14-52"></a></span>
+<span id="cb14-53"><a href="#cb14-53"></a>Actual_weather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/data.csv"</span>, <span class="at">skip =</span> <span class="dv">3</span>)</span>
+<span id="cb14-54"><a href="#cb14-54"></a></span>
+<span id="cb14-55"><a href="#cb14-55"></a>Actual_weather <span class="ot">&lt;-</span> Actual_weather <span class="sc">|&gt;</span> </span>
+<span id="cb14-56"><a href="#cb14-56"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">as.numeric</span> (<span class="fu">str_sub</span>(Date, <span class="dv">1</span>,<span class="dv">4</span>)))</span>
+<span id="cb14-57"><a href="#cb14-57"></a></span>
+<span id="cb14-58"><a href="#cb14-58"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_all<span class="sc">|&gt;</span> </span>
+<span id="cb14-59"><a href="#cb14-59"></a>  <span class="fu">left_join</span>(Actual_weather, <span class="fu">join_by</span>(year <span class="sc">==</span> year))</span>
+<span id="cb14-60"><a href="#cb14-60"></a></span>
+<span id="cb14-61"><a href="#cb14-61"></a>groundhogs_final <span class="ot">&lt;-</span> groundhogs_final <span class="sc">%&gt;%</span></span>
+<span id="cb14-62"><a href="#cb14-62"></a>  <span class="fu">mutate</span>(<span class="at">earlyspring =</span> Value <span class="sc">&gt;=</span> <span class="dv">37</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb14-63"><a href="#cb14-63"></a>  <span class="fu">mutate</span>(<span class="at">accuracy =</span> shadow <span class="sc">!=</span> earlyspring) <span class="sc">|&gt;</span></span>
+<span id="cb14-64"><a href="#cb14-64"></a>  <span class="fu">mutate</span>(<span class="at">type =</span> <span class="fu">str_replace</span>(type, <span class="st">"Taxidermied groundhogs"</span>, <span class="st">"Taxidermied groundhog"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-65"><a href="#cb14-65"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(accuracy))</span>
+<span id="cb14-66"><a href="#cb14-66"></a><span class="in">```</span></span>
+<span id="cb14-67"><a href="#cb14-67"></a></span>
+<span id="cb14-68"><a href="#cb14-68"></a></span>
+<span id="cb14-69"><a href="#cb14-69"></a></span>
+<span id="cb14-70"><a href="#cb14-70"></a><span class="fu">## Data visualization and Analysis</span></span>
+<span id="cb14-71"><a href="#cb14-71"></a></span>
+<span id="cb14-72"><a href="#cb14-72"></a>The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. </span>
+<span id="cb14-75"><a href="#cb14-75"></a><span class="in">```{r}</span></span>
+<span id="cb14-76"><a href="#cb14-76"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> accuracy, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
+<span id="cb14-77"><a href="#cb14-77"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb14-78"><a href="#cb14-78"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Type of Groundhog"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">5</span>)) <span class="sc">+</span></span>
+<span id="cb14-79"><a href="#cb14-79"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Groundhog Accuracy"</span>, <span class="at">y =</span> <span class="st">"Count Predictions"</span>, <span class="at">title =</span> <span class="st">"Accuracy of Groundhog Predictions"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>, <span class="at">alt =</span> <span class="st">"Bar Graph of ground hog prediction acuracy by type of goundhog. Groundhogs are more accurate than not, but not by much"</span>) <span class="sc">+</span></span>
+<span id="cb14-80"><a href="#cb14-80"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb14-81"><a href="#cb14-81"></a><span class="in">```</span></span>
+<span id="cb14-82"><a href="#cb14-82"></a></span>
+<span id="cb14-83"><a href="#cb14-83"></a>The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). </span>
+<span id="cb14-86"><a href="#cb14-86"></a><span class="in">```{r}</span></span>
+<span id="cb14-87"><a href="#cb14-87"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">y =</span> type, <span class="at">fill =</span> accuracy)) <span class="sc">+</span></span>
+<span id="cb14-88"><a href="#cb14-88"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>, <span class="at">color =</span> <span class="st">"white"</span>)<span class="sc">+</span></span>
+<span id="cb14-89"><a href="#cb14-89"></a>  <span class="fu">scale_fill_manual</span>(<span class="st">"Groundhog Accuracy"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb14-90"><a href="#cb14-90"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Percent of Predictions"</span>, <span class="at">y =</span> <span class="st">"Type of Groundhog"</span>, <span class="at">title =</span> <span class="st">"Proportion of Acurate Groundhog Predictions by Type"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>) <span class="sc">+</span></span>
+<span id="cb14-91"><a href="#cb14-91"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb14-92"><a href="#cb14-92"></a><span class="in">```</span></span>
+<span id="cb14-93"><a href="#cb14-93"></a></span>
+<span id="cb14-94"><a href="#cb14-94"></a></span>
+<span id="cb14-95"><a href="#cb14-95"></a>We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. </span>
+<span id="cb14-98"><a href="#cb14-98"></a><span class="in">```{r}</span></span>
+<span id="cb14-99"><a href="#cb14-99"></a><span class="fu">ggplot</span>(groundhogs_final, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> Value, <span class="at">color =</span> accuracy)) <span class="sc">+</span></span>
+<span id="cb14-100"><a href="#cb14-100"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb14-101"><a href="#cb14-101"></a>  <span class="fu">scale_color_manual</span>(<span class="st">"Groundhog Accuracy"</span>, <span class="at">values =</span> <span class="fu">viridis</span>(<span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb14-102"><a href="#cb14-102"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year of Prediction"</span>, <span class="at">y =</span> <span class="st">"Average Temperature"</span>, <span class="at">title =</span> <span class="st">"Prediction Acuracy by Temperature Over Time"</span>, <span class="at">caption =</span> <span class="st">"Data from groundhog-day.com and NOAR"</span>) <span class="sc">+</span></span>
+<span id="cb14-103"><a href="#cb14-103"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">37</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb14-104"><a href="#cb14-104"></a>  <span class="fu">theme_bw</span>()</span>
+<span id="cb14-105"><a href="#cb14-105"></a><span class="in">```</span></span>
+<span id="cb14-106"><a href="#cb14-106"></a></span>
+<span id="cb14-107"><a href="#cb14-107"></a></span>
+<span id="cb14-108"><a href="#cb14-108"></a>The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.</span>
+<span id="cb14-109"><a href="#cb14-109"></a></span>
+<span id="cb14-112"><a href="#cb14-112"></a><span class="in">```{r}</span></span>
+<span id="cb14-113"><a href="#cb14-113"></a><span class="fu">library</span>(mosaic)</span>
+<span id="cb14-114"><a href="#cb14-114"></a></span>
+<span id="cb14-115"><a href="#cb14-115"></a><span class="co">#Tribble dataset</span></span>
+<span id="cb14-116"><a href="#cb14-116"></a></span>
+<span id="cb14-117"><a href="#cb14-117"></a>groundhog_location <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb14-118"><a href="#cb14-118"></a>  <span class="sc">~</span>name, <span class="sc">~</span>longitude, <span class="sc">~</span>latitude, <span class="sc">~</span>type,</span>
+<span id="cb14-119"><a href="#cb14-119"></a>  <span class="st">"Punxsutawney Phil"</span>,<span class="sc">-</span><span class="fl">78.96225</span>, <span class="fl">40.9312</span>, <span class="st">"Groundhog"</span>, </span>
+<span id="cb14-120"><a href="#cb14-120"></a>  <span class="st">"Octoraro Orphie"</span>, <span class="sc">-</span><span class="fl">76.09196</span>, <span class="fl">39.82554</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb14-121"><a href="#cb14-121"></a>  <span class="st">"Schnogadahl Sammi"</span>,<span class="sc">-</span><span class="fl">75.49787</span>, <span class="fl">40.90142</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb14-122"><a href="#cb14-122"></a>  <span class="st">"Poor Richard"</span>, <span class="sc">-</span><span class="fl">76.72926</span>, <span class="fl">39.96586</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb14-123"><a href="#cb14-123"></a>  <span class="st">"Uni the Groundhog"</span>, <span class="sc">-</span><span class="fl">76.29992</span>, <span class="fl">40.41813</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb14-124"><a href="#cb14-124"></a>  <span class="st">"Grover and Sue"</span>, <span class="sc">-</span><span class="fl">76.36766</span>, <span class="fl">40.57162</span>, <span class="st">"Taxidermied groundhog"</span>,</span>
+<span id="cb14-125"><a href="#cb14-125"></a>  <span class="st">"Dover Doug"</span>, <span class="sc">-</span><span class="fl">76.85717</span>, <span class="fl">39.99791</span>, <span class="st">"Person in a groundhog suit"</span>,</span>
+<span id="cb14-126"><a href="#cb14-126"></a>  <span class="st">"Lawrenceville Lucy"</span>, <span class="sc">-</span><span class="fl">77.20171</span>, <span class="fl">41.97356</span>, <span class="st">"Groundhog"</span>,</span>
+<span id="cb14-127"><a href="#cb14-127"></a>  <span class="st">"Mount Joy Minnie"</span>, <span class="sc">-</span><span class="fl">76.50431</span>, <span class="fl">40.10912</span>, <span class="st">"Plush groundhog"</span>,</span>
+<span id="cb14-128"><a href="#cb14-128"></a>  <span class="st">"Patty Pagoda"</span>, <span class="sc">-</span><span class="fl">75.90783</span>, <span class="fl">40.33607</span>, <span class="st">"Person in a groundhog suit"</span>,</span>
+<span id="cb14-129"><a href="#cb14-129"></a>  <span class="st">"Tinicum Tim"</span>, <span class="sc">-</span><span class="fl">75.25721</span>, <span class="fl">39.89215</span>, <span class="st">"Groundhog puppet"</span>,</span>
+<span id="cb14-130"><a href="#cb14-130"></a>  <span class="st">"Harleysville Hank"</span>, <span class="sc">-</span><span class="fl">75.38234</span>, <span class="fl">40.29050</span>, <span class="st">"Plush groundhog"</span>,</span>
+<span id="cb14-131"><a href="#cb14-131"></a>  <span class="st">"Mount Gretna Grady"</span>, <span class="sc">-</span><span class="fl">76.46776</span>, <span class="fl">40.24677</span>, <span class="st">"Plush groundhog"</span>,</span>
+<span id="cb14-132"><a href="#cb14-132"></a>  <span class="st">"Poppy the Groundhog"</span>, <span class="sc">-</span><span class="fl">76.66445</span>, <span class="fl">40.12133</span>, <span class="st">"Groundhog"</span>,</span>
+<span id="cb14-133"><a href="#cb14-133"></a>  <span class="st">"MT Parker"</span>, <span class="sc">-</span><span class="fl">76.30730</span>, <span class="fl">40.05880</span>, <span class="st">"Plush groundhog"</span></span>
+<span id="cb14-134"><a href="#cb14-134"></a>)</span>
+<span id="cb14-135"><a href="#cb14-135"></a></span>
+<span id="cb14-136"><a href="#cb14-136"></a><span class="fu">library</span>(gplots)</span>
+<span id="cb14-137"><a href="#cb14-137"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb14-138"><a href="#cb14-138"></a><span class="fu">library</span>(htmlwidgets)</span>
+<span id="cb14-139"><a href="#cb14-139"></a></span>
+<span id="cb14-140"><a href="#cb14-140"></a></span>
+<span id="cb14-141"><a href="#cb14-141"></a><span class="co">#Map</span></span>
+<span id="cb14-142"><a href="#cb14-142"></a><span class="fu">leaflet</span>(<span class="at">data =</span> groundhog_location) <span class="sc">|&gt;</span></span>
+<span id="cb14-143"><a href="#cb14-143"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span></span>
+<span id="cb14-144"><a href="#cb14-144"></a>  <span class="fu">addCircles</span>(<span class="at">color =</span> <span class="sc">~</span><span class="fu">colorFactor</span>(<span class="fu">c</span>(<span class="st">"darkred"</span>,<span class="st">"darkgreen"</span>,<span class="st">"red"</span>,<span class="st">"darkblue"</span>,<span class="st">"orange"</span>), <span class="at">domain=</span> groundhog_location<span class="sc">$</span>type)(type), <span class="at">label =</span> groundhog_location<span class="sc">$</span>name) <span class="sc">|&gt;</span></span>
+<span id="cb14-145"><a href="#cb14-145"></a>   <span class="fu">addLegend</span>(<span class="at">position =</span> <span class="st">"bottomright"</span>,</span>
+<span id="cb14-146"><a href="#cb14-146"></a>            <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"darkred"</span>,<span class="st">"darkgreen"</span>,<span class="st">"red"</span>,<span class="st">"darkblue"</span>,<span class="st">"orange"</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Groundhog"</span>,<span class="st">"Groundhog Puppet"</span>, <span class="st">"Person in a groundhog suit"</span>, <span class="st">"Plush groundhog"</span>,<span class="st">"Taxidermied groundhog"</span>), <span class="at">title =</span><span class="st">"Legend"</span>)</span>
+<span id="cb14-147"><a href="#cb14-147"></a></span>
+<span id="cb14-148"><a href="#cb14-148"></a><span class="co">#filtered data</span></span>
+<span id="cb14-149"><a href="#cb14-149"></a></span>
+<span id="cb14-150"><a href="#cb14-150"></a>groundhogs_penn <span class="ot">&lt;-</span> groundhogs_all <span class="sc">|&gt;</span> </span>
+<span id="cb14-151"><a href="#cb14-151"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Pennsylvania"</span>)</span>
+<span id="cb14-152"><a href="#cb14-152"></a></span>
+<span id="cb14-153"><a href="#cb14-153"></a><span class="in">```</span></span>
+<span id="cb14-154"><a href="#cb14-154"></a> </span>
+<span id="cb14-155"><a href="#cb14-155"></a></span>
+<span id="cb14-156"><a href="#cb14-156"></a></span>
+<span id="cb14-157"><a href="#cb14-157"></a><span class="fu">## What is the story here?  </span></span>
+<span id="cb14-158"><a href="#cb14-158"></a></span>
+<span id="cb14-159"><a href="#cb14-159"></a>Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities. </span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -1058,8 +1302,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 <script src="site_libs/quarto-html/zenscroll-min.js"></script>
