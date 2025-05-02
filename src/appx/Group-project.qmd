@@ -114,16 +114,12 @@ library(gplots)
 library(leaflet)
 library(htmlwidgets)
 
-
 #Map
-groundhog_map <- leaflet(data = groundhog_location) |>
+leaflet(data = groundhog_location) |>
   addTiles() |>
   addCircles(color = ~colorFactor(c("darkred","darkgreen","red","darkblue","orange"), domain= groundhog_location$type)(type), label = groundhog_location$name) |>
    addLegend(position = "bottomright",
-            colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Type")
-
-saveWidget(groundhog_map, file = "groundhog_map.html")
-
+            colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Legend")
 
 ```{r}
 #filtered data
