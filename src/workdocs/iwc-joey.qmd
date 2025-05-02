@@ -4,9 +4,28 @@ format: html
 ---
 
 ```{r}
-# 61 data point > 37 F (Early Spring) --- 69 data points < 37 F (Late Winter)
-#Actual_weather|>
-  #arrange(desc(Value))
+library(tidyverse)
+library(viridis)
+
+groundhogs <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv')
+predictions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv')
+
+groundhogs_all <- predictions |> 
+   left_join(groundhogs, join_by(id==id)) |> 
+  filter(region == "Pennsylvania")
+```
+
+```{r}
+# Read Weather Data 
+library(readr)
+Actual_weather <- read_csv("../../data/data.csv", skip = 3)
+```
+
+
+```{r}
+#61 data point > 37 F (Early Spring) --- 69 data points < 37 F (Late Winter)
+Actual_weather|>
+  arrange(desc(Value))
 ```
 
 ```{r}
@@ -40,7 +59,6 @@ library(leaflet)
 
 ```{r}
 #Map
-
 leaflet(data = groundhog_location) |>
   addTiles() |>
   addCircles(color = ~colorFactor(c("darkred","darkgreen","red","darkblue","orange"), domain= groundhog_location$type)(type), label = groundhog_location$name) |>
