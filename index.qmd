@@ -80,7 +80,7 @@ groundhogs_final <- groundhogs_final %>%
 
 ## Data visualization and Analysis
 
-The next stage is analyzing the data and we make several visualizations to explore our research question. The first visualization explores the accuracy of groundhog predictions by type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. 
+The next stage is analyzing the data and we make several visualizations to explore our research question. First we wanted to learn about how accurate groundhogs are overall. Our first visualization explores the accuracy of groundhog predictions colored type of groundhog. This is a stacked bar graph with the x axis being groundhog accuracy (true or false) which determines if the groundhog was right or wrong in its predictions, and the y axis being the count of predictions. The bar graph indicates that overall groundhogs are slightly more accurate than not, with more true counts than false counts. 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
 ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
   geom_bar()+
@@ -89,7 +89,7 @@ ggplot(groundhogs_final, aes(x = accuracy, fill = type)) +
   theme_bw()
 ```
 
-The next visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). 
+Next to explore ground hog accuracy more, we wanted to see how accurate each type of ground hog is. This visualization is a stacked bar graph that looks at the proportion of accurate predictions by groundhog types. The y axis is the groundhog type and the y axis is the percent of predictions that are true and those that are false, coded by color. Groundhog puppets are the most accurate (over 75%), while real groundhogs are some of the least (around 50%). 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
 ggplot(groundhogs_final, aes(y = type, fill = accuracy)) +
   geom_bar(position = "fill", color = "white")+
@@ -99,7 +99,7 @@ ggplot(groundhogs_final, aes(y = type, fill = accuracy)) +
 ```
 
 
-We also analyse accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. 
+Additionally we wanted to explore how accurate ground hogs were depending on the temperature. We analyze accuracy by temperature overtime using a scatter plot. The x axis is the year of prediction and the y axis is the average temperature. The points are grouped by true or false which essentially measures the accuracy of the groundhog. Additionally we select a line that represents the early spring cut off, defined by the temperature where frost stops forming (37°f). The results show that groundhogs are more accurate at predicting more winter than early spring. 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
 ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
   geom_point() +
@@ -110,7 +110,7 @@ ggplot(groundhogs_final, aes(x = year, y = Value, color = accuracy)) +
 ```
 
 
-The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.
+Finally we wanted to explore where the ground hogs we were studying are located. The final visualization is a leaflet map that shows the distribution of the different groundhog types. This is an interactive leaflet map that allows the reader to zoom in and out. We have coded the map to be an html file. The leaflet map shows that the majority of groundhogs are located in Southeast Pennsylvania, however the outliers are more often real Groundhogs.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
 library(mosaic)
