@@ -34,7 +34,20 @@ We source our data from tidytuesday, which provides two csv files, one for groun
 
 ## Data preparation 
 
-The data wrangling process involved merging the groundhog data set to the prediction data set using the id variable. We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. To deal with this we decided to filter our data to one specific state, mainly Pennsylvania. The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. We used the year variable which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from 1998 to 2023. We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.
+The Tidy Tuesday data came with two separate data sets: the groundhog data which gave biographical information for groundhogs and the prediction data set which provided a record of annual weather predictions by each groundhog.
+
+- **Merged the groundhog data set to the prediction data set** using the id variable. 
+
+We noted that the different regions have different weather patterns hence predictions which added a lot of noise in the data. 
+
+- To deal with this we decided to **filter our data to one specific state, mainly Pennsylvania.** The main reason for choosing this state is because it had the most observations, which would provide us more details in our analysis. 
+
+Once we had merged and filtered the data set, the next step was to add the weather data that would be used to compare with groundhog predictions. 
+
+- We sourced the **data from the National Center for Environmental Information**, which gave us an average temperature for a 3-month period from February to April that we will use to determine an early spring or late winter. 
+- We **merged by the year variable** which presents values of the average temperature for that year in the weather data and is the prediction year for the groundhogs data for the year period from 1998 to 2023. 
+
+We then produced a final groundhogs prediction data set that incorporates actual weather data for each year.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}
 library(tidyverse)
