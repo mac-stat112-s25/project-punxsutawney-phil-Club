@@ -133,8 +133,8 @@ leaflet(data = groundhog_location) |>
   addTiles() |>
   addCircles(color = ~colorFactor(c("darkred","darkgreen","red","darkblue","orange"), domain= groundhog_location$type)(type), label = groundhog_location$name) |>
    addLegend(position = "bottomright",
-            colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Legend")
-
+            colors = c("darkred","darkgreen","red","darkblue","orange"), labels = c("Groundhog","Groundhog Puppet", "Person in a groundhog suit", "Plush groundhog","Taxidermied groundhog"), title ="Legend")|>
+  addControl("<strong>Distribution of Groundhogs</strong>", position = "topright")
 #filtered data
 
 groundhogs_penn <- groundhogs_all |> 
@@ -146,4 +146,6 @@ groundhogs_penn <- groundhogs_all |>
 
 ## What is the story here?  
 
-Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities. 
+![](https://i.imgflip.com/1ivp9a.jpg)
+
+Groundhog predictions have an almost 50% chance of being correct and in most cases they are good at predicting winter. Since there are so many different types of groundhogs, real groundhogs are not the only animal type we consider. Through data analysis and data visualization, we found that Groundhogs are generally 50% accurate in their predictions. This varies slightly based on type with groundhog puppets and groundhog plushies being slightly more accurate.These results give a valid value to the holiday that will continue to play a significant role in many communities. In conclusion, although it may be hard to confirm that groundhogs are truly natures meteorologits, they still play a significant role in nature. 
