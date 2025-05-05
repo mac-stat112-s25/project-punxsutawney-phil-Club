@@ -27,4 +27,8 @@ To run the code in this repository, please ensure the following software (or new
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/mac-stat112-s25/project-punxsutawney-phil-club
+   
+   
+2. **Load packages**  
 
+3. **Press Build in tool bar  and render book**
