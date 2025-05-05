@@ -2,19 +2,41 @@
 title: "Proposal"
 ---
 
-Title: a title: The Truth Behind Groundhog Accuracy: A Data-Driven Study
+# The Truth Behind Groundhog Accuracy: A Data-Driven Study
 
-Names: Joey Gebin, Zeke Friendly, Mayande Mamba 
+## Team Members
+- Joey Gebin  
+- Zeke Friendly  
+- Mayande Mamba  
 
-Short description of the project: We will explore the last 130 years of groundhog predictions, analyzing how correct they were about winter/spring, how often do groundhogs agree, and whether factors (like location) might affect the accuracy of their predictions. We also are interested in exploring which is more accurate between groundhog and non groundhog predictions
+---
 
-The reasons/inspirations behind choosing this project: We are curious to explore how effective groundhog prediction actually and what are some key identifiable patterns of the predictions
+## Project Description
 
-Implementation and responsibility plan: 
-- Deliverables: - Group/ Project Information submission 
-                - Effective Teamwork Reading Summary
-                - Combine data sets (and add weather outcomes)(filter out Canada observations) 
+We explore the last 130 years of Groundhog Day predictions, analyzing:
 
+- How accurate groundhogs have been in predicting winter or spring.  
+- How often different groundhogs agree in their forecasts.  
+- Whether factors like **location**, **groundhog identity**, or **time period** affect prediction accuracy.  
+- A comparison between **groundhog-based** and **non-groundhog-based** forecasts.
+
+---
+
+## Project Inspiration
+
+Our curiosity was sparked by the folklore surrounding Groundhog Day.  
+We wanted to use data to assess whether there’s any statistical merit behind groundhog predictions and what patterns—if any—emerge from them.
+
+---
+
+## Implementation Plan & Responsibilities
+
+Work as a team and have regugular check ins for the project
+
+### Deliverables
+
+- ✅ Group/Project Information Submission  
+- ✅ Effective Teamwork Reading Summary  
 
 
 
