@@ -4,7 +4,7 @@ format: html
 ---
 
 ## Teamwork Summary
-Article: https://www.indeed.com/career-advice/career-development/good-teamwork 
+Article: [Career Advice: Good Teamwork](https://www.indeed.com/career-advice/career-development/good-teamwork) 
 
 # Characteristics of good teamwork
 Communication is really important in teamwork. Make sure to always be in contact with your group and keep them updated on your work. Additionally establishing clear roles can help avoid confusion, keep people on track, and remove redundant work. Finally setting clear goals throughout the project is important so everybody knows what to be working on. 
