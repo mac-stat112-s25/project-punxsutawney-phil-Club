@@ -4,7 +4,7 @@ title: "Case Study"
 
 Your case study will go here.
 
-Case Study: Uber Is Taking Millions Of Manhattan Rides Away From Taxis
+[Case Study: Uber Is Taking Millions Of Manhattan Rides Away From Taxis](https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/)
 
 Observations: The visualizations use in the article are effective. The first graph shows the changes in NYC pickups by Uber compared to yellow cabs, green cabs. We can clearly compare this behavior and infer how each transport type has done over time relative to each other. According tho the article's graph we can now compare the April-to-June period in each year. Uber pickups in New York City rose sharply over this time span — no surprise, as the company was aggressively entering the market. Green cabs (which pick up passengers in the outer boroughs and in northern Manhattan) saw an uptick, while yellow cab pickups declined, according to ride data. 
 
