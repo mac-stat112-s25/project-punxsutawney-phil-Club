@@ -74,9 +74,9 @@
     "href": "src/et/zeke-f.html",
     "title": "2  Zeke F",
     "section": "",
-    "text": "2.1 Teamwork Summary\nArticle: https://www.indeed.com/career-advice/career-development/good-teamwork",
+    "text": "2.1 Teamwork Summary\nArticle: Career Advice: Good Teamwork",
     "crumbs": [
-      "Effective Team Work",
+      "Effective TeamWork",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Zeke F</span>"
     ]
   },
@@ -85,20 +85,9 @@
     "href": "src/et/joey-g.html",
     "title": "3  Joey G",
     "section": "",
-    "text": "3.1 Teamwork Article Summary\nhttps://hr.mit.edu/learning-topics/teams/articles/basics\nThere are several factors identified as key to a team’s success. They include:",
+    "text": "3.1 Teamwork Article Summary\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD",
     "crumbs": [
-      "Effective Team Work",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Joey G</span>"
-    ]
-  },
-  {
-    "objectID": "src/et/joey-g.html#teamwork-article-summary",
-    "href": "src/et/joey-g.html#teamwork-article-summary",
-    "title": "3  Joey G",
-    "section": "",
-    "text": "Shared understanding of the team’s mission\nCommitment to the team’s goals\nClearly defined roles and responsibilities\nAgreed-upon ground rules\nAn established decision-making model\nEffective group process including commitment to open communication, mutual accountability and appropriate self-evaluation",
-    "crumbs": [
-      "Effective Team Work",
+      "Effective TeamWork",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Joey G</span>"
     ]
   },
@@ -109,7 +98,7 @@
     "section": "",
     "text": "4.1 Title: Overview of the Research on Team Effectiveness\nThis article present a summary of literature on team effectiveness, highlighting findings on the key features that create challenges for team science. Team effectiveness is a team’s capacity to achieve its goals and objectives, which leads to improved outcomes for the team members as well as outcomes produced or influenced by the team. It discusses some background information to give key considerations that build teamwork,theoretical models frameworks. It presents an interesting concept called the Team processes which are the means by which team members marshal and coordinate their individual resources.These include:\nThe article also discusses interventions that have been found to influence team processes:\nSome key challenges taht effect the processes:",
     "crumbs": [
-      "Effective Team Work",
+      "Effective TeamWork",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mayande M</span>"
     ]
   },
@@ -120,7 +109,7 @@
     "section": "",
     "text": "Cognitive Team Processes\nTeam Mental Models and Transactive Memory Cognitive Team Interaction\nTeam Climate\nPsychological Safety\nMotivational and Affective Team Processes - Team Cohesion, Team Efficacy, Team Conflict\nTeam Behavioral Processes - Team Process Competencies, Team Self-Regulation, Measuring Team Processes\n\n\n\nTeam Composition: Individual Inputs to Shape Team Processes\nProfessional Development to Shape Team Processes\nLeadership to Shape Team Processes\n\n\n\nDeep knowledge integration\nLarge science groups composed of sub-teams that may be misaligned with other subteams\nGeographic dispersion\nHigh task interdependence\nTime allocation and organization",
     "crumbs": [
-      "Effective Team Work",
+      "Effective TeamWork",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Mayande M</span>"
     ]
   },
@@ -206,7 +195,51 @@
     "href": "src/appx/proposal.html",
     "title": "Appendix A — Proposal",
     "section": "",
-    "text": "Title: a title: The Truth Behind Groundhog Accuracy: A Data-Driven Study\nNames: Joey Gebin, Zeke Friendly, Mayande Mamba\nShort description of the project: We will explore the last 130 years of groundhog predictions, analyzing how correct they were about winter/spring, how often do groundhogs agree, and whether factors (like location) might affect the accuracy of their predictions. We also are interested in exploring which is more accurate between groundhog and non groundhog predictions\nThe reasons/inspirations behind choosing this project: We are curious to explore how effective groundhog prediction actually and what are some key identifiable patterns of the predictions\nImplementation and responsibility plan: - Deliverables: - Group/ Project Information submission - Effective Teamwork Reading Summary - Combine data sets (and add weather outcomes)(filter out Canada observations)",
+    "text": "B The Truth Behind Groundhog Accuracy: A Data-Driven Study",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "src/appx/proposal.html#team-members",
+    "href": "src/appx/proposal.html#team-members",
+    "title": "Appendix A — Proposal",
+    "section": "B.1 Team Members",
+    "text": "B.1 Team Members\n\nJoey Gebin\n\nZeke Friendly\n\nMayande Mamba",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "src/appx/proposal.html#project-description",
+    "href": "src/appx/proposal.html#project-description",
+    "title": "Appendix A — Proposal",
+    "section": "B.2 Project Description",
+    "text": "B.2 Project Description\nWe explore the last 130 years of Groundhog Day predictions, analyzing:\n\nHow accurate groundhogs have been in predicting winter or spring.\n\nHow often different groundhogs agree in their forecasts.\n\nWhether factors like location, groundhog identity, or time period affect prediction accuracy.\n\nA comparison between groundhog-based and non-groundhog-based forecasts.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "src/appx/proposal.html#project-inspiration",
+    "href": "src/appx/proposal.html#project-inspiration",
+    "title": "Appendix A — Proposal",
+    "section": "B.3 Project Inspiration",
+    "text": "B.3 Project Inspiration\nOur curiosity was sparked by the folklore surrounding Groundhog Day.\nWe wanted to use data to assess whether there’s any statistical merit behind groundhog predictions and what patterns—if any—emerge from them.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "src/appx/proposal.html#implementation-plan-responsibilities",
+    "href": "src/appx/proposal.html#implementation-plan-responsibilities",
+    "title": "Appendix A — Proposal",
+    "section": "B.4 Implementation Plan & Responsibilities",
+    "text": "B.4 Implementation Plan & Responsibilities\nWork as a team and have regugular check ins for the project\n\nB.4.1 Deliverables\n\n✅ Group/Project Information Submission\n\n✅ Effective Teamwork Reading Summary\n\n\n\n\nWork Table",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
@@ -217,7 +250,7 @@
     "href": "src/appx/case-study.html",
     "title": "Appendix B — Case Study",
     "section": "",
-    "text": "Your case study will go here.\nCase Study: Uber Is Taking Millions Of Manhattan Rides Away From Taxis\nObservations: The visualizations use in the article are effective. The first graph shows the changes in NYC pickups by Uber compared to yellow cabs, green cabs. We can clearly compare this behavior and infer how each transport type has done over time relative to each other. According tho the article’s graph we can now compare the April-to-June period in each year. Uber pickups in New York City rose sharply over this time span — no surprise, as the company was aggressively entering the market. Green cabs (which pick up passengers in the outer boroughs and in northern Manhattan) saw an uptick, while yellow cab pickups declined, according to ride data.\nThe second graph shows a set of chloropleth maps that show the net change in total, taxi, and Uber pickups from April-June 2014 to April-June 2015.Zones marked in blue experienced a net decrease in pickups, while red zones saw a net increase. Through this use of color and gradient, we can see how each type of service has changed in total over the area of research. According to the article we can infer that “Both taxis and Ubers increased their pickups in Brooklyn and Queens, particularly in gentrifying areas; the services are supplementing each other in these neighborhoods. Uber also gained in Staten Island and the Bronx, while taxi pickups were flat in those boroughs. In Manhattan’s core the area outlined on the maps, where green cabs aren’t allowed to make pickups”. Overall, the maps have titles, effective use of color and gradient that is inclusive. There are additional labels that help inform the information on the graphs.\nThe article also has used a table to supplement the visualization. We are able to see the numbers aligning with the behavior we see on the map.\nThe last visualization is a linear plot (line of best fit), with bubble plots showing how Uber is replacing cabs in Manhattan. It shows the change in taxi pickups compared to Uber pickups by taxi zone in borough’s core. This visualization uses shape and size to help present the information.",
+    "text": "Case Study: Uber Is Taking Millions Of Manhattan Rides Away From Taxis\nObservations: The visualizations use in the article are effective. The first graph shows the changes in NYC pickups by Uber compared to yellow cabs, green cabs. We can clearly compare this behavior and infer how each transport type has done over time relative to each other. According tho the article’s graph we can now compare the April-to-June period in each year. Uber pickups in New York City rose sharply over this time span — no surprise, as the company was aggressively entering the market. Green cabs (which pick up passengers in the outer boroughs and in northern Manhattan) saw an uptick, while yellow cab pickups declined, according to ride data.\nThe second graph shows a set of chloropleth maps that show the net change in total, taxi, and Uber pickups from April-June 2014 to April-June 2015.Zones marked in blue experienced a net decrease in pickups, while red zones saw a net increase. Through this use of color and gradient, we can see how each type of service has changed in total over the area of research. According to the article we can infer that “Both taxis and Ubers increased their pickups in Brooklyn and Queens, particularly in gentrifying areas; the services are supplementing each other in these neighborhoods. Uber also gained in Staten Island and the Bronx, while taxi pickups were flat in those boroughs. In Manhattan’s core the area outlined on the maps, where green cabs aren’t allowed to make pickups”. Overall, the maps have titles, effective use of color and gradient that is inclusive. There are additional labels that help inform the information on the graphs.\nThe article also has used a table to supplement the visualization. We are able to see the numbers aligning with the behavior we see on the map.\nThe last visualization is a linear plot (line of best fit), with bubble plots showing how Uber is replacing cabs in Manhattan. It shows the change in taxi pickups compared to Uber pickups by taxi zone in borough’s core. This visualization uses shape and size to help present the information.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
