@@ -2,7 +2,6 @@
 title: "Case Study"
 ---
 
-Your case study will go here.
 
 [Case Study: Uber Is Taking Millions Of Manhattan Rides Away From Taxis](https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/)
 
