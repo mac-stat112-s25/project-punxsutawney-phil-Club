@@ -1,0 +1,21 @@
+---
+title: "Joey G"
+format: html
+---
+
+
+
+[Teamwork Article:](https://hr.mit.edu/learning-topics/teams/articles/basics)
+=======
+[The Basics of Working on Teams](https://hr.mit.edu/learning-topics/teams/articles/basics)
+>>>>>>> 3fcfdc22cd1be886423e5eac5f2213ae42e4d737
+
+There are several factors identified as key to a team's success. They include:
+
+- Shared understanding of the team's mission
+- Commitment to the team's goals
+- Clearly defined roles and responsibilities
+- Agreed-upon ground rules
+- An established decision-making model
+- Effective group process including commitment to open communication, mutual accountability and appropriate self-evaluation
+
