@@ -135,7 +135,7 @@ cookieconsent.run({
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../">sidebar title</a> 
+      <a href="../../">Punxsutawney-Club</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -318,42 +318,50 @@ cookieconsent.run({
 
 
 </header><div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(janitor)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'janitor'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>groundhogs_final <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="fu">get_one_to_one</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+ [1] "id"                 "slug"               "shortname"         
+ [4] "name"               "city"               "latitude"          
+ [7] "longitude"          "source"             "current_prediction"
+[10] "description"        "image"             
 
-    chisq.test, fisher.test</code></pre>
+[[2]]
+[1] "year" "Date"
+
+[[3]]
+[1] "region"  "country" "active" </code></pre>
 </div>
 </div>
 <div class="cell">
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Load Data</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/groundhogs.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Rows: 75 Columns: 17
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (11): slug, shortname, name, city, region, country, source, current_pred...
-dbl  (4): id, latitude, longitude, predictions_count
-lgl  (2): is_groundhog, active
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/predictions.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1462 Columns: 4
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): details
-dbl (2): id, year
-lgl (1): shadow
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">compare_df_cols</span>(groundhogs_final, groundhogs, groundhogs_all)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>          column_name groundhogs_final groundhogs groundhogs_all
+1            accuracy          logical       &lt;NA&gt;           &lt;NA&gt;
+2              active          logical    logical        logical
+3                city        character  character      character
+4             country        character  character      character
+5  current_prediction        character  character      character
+6                Date          numeric       &lt;NA&gt;           &lt;NA&gt;
+7         description        character  character      character
+8             details        character       &lt;NA&gt;      character
+9         earlyspring          logical       &lt;NA&gt;           &lt;NA&gt;
+10                 id          numeric    numeric        numeric
+11              image        character  character      character
+12       is_groundhog          logical    logical        logical
+13           latitude          numeric    numeric        numeric
+14          longitude          numeric    numeric        numeric
+15               name        character  character      character
+16  predictions_count          numeric    numeric        numeric
+17             region        character  character      character
+18             shadow          logical       &lt;NA&gt;        logical
+19          shortname        character  character      character
+20               slug        character  character      character
+21             source        character  character      character
+22               type        character  character      character
+23              Value          numeric       &lt;NA&gt;           &lt;NA&gt;
+24               year          numeric       &lt;NA&gt;        numeric</code></pre>
 </div>
 </div>
 
@@ -991,19 +999,52 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">---</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="an">title:</span><span class="co"> "Joey G"</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="co">---</span></span>
-<span id="cb8-5"><a href="#cb8-5"></a></span>
-<span id="cb8-8"><a href="#cb8-8"></a><span class="in">```{r}</span></span>
-<span id="cb8-9"><a href="#cb8-9"></a><span class="fu">library</span>(janitor)</span>
-<span id="cb8-10"><a href="#cb8-10"></a><span class="in">```</span></span>
-<span id="cb8-13"><a href="#cb8-13"></a><span class="in">```{r}</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="co"># Load Data</span></span>
-<span id="cb8-15"><a href="#cb8-15"></a>groundhogs <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/groundhogs.csv'</span>)</span>
-<span id="cb8-16"><a href="#cb8-16"></a>predictions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2024/2024-01-30/predictions.csv'</span>)</span>
-<span id="cb8-17"><a href="#cb8-17"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb5" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">---</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="an">title:</span><span class="co"> "Joey G"</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">---</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="in">```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="in">library(janitor)</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="in">```</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="in">```{r, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE}</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="in">library(tidyverse)</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="in">library(viridis)</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="in">library(readr)</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="in">groundhogs &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/groundhogs.csv')</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="in">predictions &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-01-30/predictions.csv')</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="in">groundhogs_all &lt;- predictions |&gt; </span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="in">   left_join(groundhogs, join_by(id==id)) |&gt; </span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="in">  filter(region == "Pennsylvania")</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a></span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="in">#Actual_weather &lt;- read_csv("data/data.csv", skip = 3)</span></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="in">#Read Weather Data </span></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="in">Actual_weather &lt;- read_csv("../../data/data.csv", skip = 3)</span></span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="in">Actual_weather &lt;- Actual_weather |&gt; </span></span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="in">  mutate(year = as.numeric (str_sub(Date, 1,4)))</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a></span>
+<span id="cb5-28"><a href="#cb5-28"></a></span>
+<span id="cb5-29"><a href="#cb5-29"></a><span class="in">groundhogs_final &lt;- groundhogs_all|&gt; </span></span>
+<span id="cb5-30"><a href="#cb5-30"></a><span class="in">  left_join(Actual_weather, join_by(year == year))</span></span>
+<span id="cb5-31"><a href="#cb5-31"></a></span>
+<span id="cb5-32"><a href="#cb5-32"></a><span class="in">groundhogs_final &lt;- groundhogs_final %&gt;%</span></span>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="in">  mutate(earlyspring = Value &gt;= 37) |&gt; </span></span>
+<span id="cb5-34"><a href="#cb5-34"></a><span class="in">  mutate(accuracy = shadow != earlyspring) |&gt;</span></span>
+<span id="cb5-35"><a href="#cb5-35"></a><span class="in">  mutate(type = str_replace(type, "Taxidermied groundhogs", "Taxidermied groundhog")) |&gt; </span></span>
+<span id="cb5-36"><a href="#cb5-36"></a><span class="in">  filter(!is.na(accuracy))</span></span>
+<span id="cb5-37"><a href="#cb5-37"></a><span class="in">```</span></span>
+<span id="cb5-38"><a href="#cb5-38"></a></span>
+<span id="cb5-41"><a href="#cb5-41"></a><span class="in">```{r}</span></span>
+<span id="cb5-42"><a href="#cb5-42"></a>groundhogs_final <span class="sc">|&gt;</span></span>
+<span id="cb5-43"><a href="#cb5-43"></a>  <span class="fu">get_one_to_one</span>()</span>
+<span id="cb5-44"><a href="#cb5-44"></a><span class="in">```</span></span>
+<span id="cb5-45"><a href="#cb5-45"></a></span>
+<span id="cb5-48"><a href="#cb5-48"></a><span class="in">```{r}</span></span>
+<span id="cb5-49"><a href="#cb5-49"></a><span class="fu">compare_df_cols</span>(groundhogs_final, groundhogs, groundhogs_all)</span>
+<span id="cb5-50"><a href="#cb5-50"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
