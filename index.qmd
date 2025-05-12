@@ -11,7 +11,6 @@ code: false  # change to true to fold the code chunks
 ## Background 
 
 Groundhog Day is a tradition where a groundhog **predicts the arrival of spring by observing its shadow**. It is celebrated annually on February 2nd with excitement and cultural significance.The predictions work as follows.
-
 **Shadow Means Winter Continues**
 If the groundhog sees its shadow, winter lasts six more weeks.
 
